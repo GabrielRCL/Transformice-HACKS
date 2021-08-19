@@ -1,0 +1,277 @@
+==================================================================================
+
+PACK DE AOBS CRIADAS E ATUALIZADAS POR CODE MASTER OFICIAL!!!
+
+==================================================================================
+
+- DEIXE CRÉDITOS EM TODAS AS AOBS, MOSTRE QUE VOCE NÃO É UM PLAGEADOR LIXO!!!
+
+- QUEM NAO DEIXAR CRÉDITOS TOMARÁ EXPOSED 
+
+- VOU CONTRATAR UM NEGÃO PIRUSUDO PRA COMER CADA UM DOS FDP'S QUE NÃO DEIXAREM CRÉDITOS!
+
+====================================================================================
+
+DICA: LARGUE AS POHAS DAS BASES, ESTUDE CHEAT ENGINE E CRIE ALGO QUE PRESTE!
+
+====================================================================================
+
+
+Fortoresse Munição Hack [ATUALIZADO POR CODE MASTER, DEIXE A PORRA DOS CRÉDITOS!]
+
+8B 42 40 3B C1 7F
+>
+89
+
+
+=====================================================================================
+Cor Hack TRANSFORMICE! EXCLUSIVO (5 scripts pra pegar no chat) CRIADO POR CODE MASTER!!!!
+
+-Não precisa marcar writable e copy!
+
+DA C2 C2 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+>
+Verde:
+3f f3 00 02
+Preto:
+02 02 02 45 40
+Vermelho:
+02 00 d8 00 40
+Preto tbm
+02 00 00 59
+Azul
+F4 00 01 0a
+Rosa
+ef 0a f3 3f
+
+SISTEMA DE CORES By CORINGA, CORES BY CODE MASTER!!
+
+======================================================================================
+
+
+PERFIL HACK LEVEL 99 (CRIADOR OFICIAL CODE MASTER, DEIXE A POHA DOS CRÉDITOS!!)
+
+-Não precisa marcar writable e copy!
+
+4C 00 65 00 76 00 65 00 6C 00 20 00 25 00 31 00
+>
+4C 00 65 00 76 00 65 00 6C 00 20 00 39 00 39
+
+=======================================================================================
+
+Mudar o botao de ajuda do mice pra TH (CRIADO NA SWF POR CODE MASTER!!)
+
+
+-Não precisa marcar writable e copy!
+
+
+68 74 74 70 3A 2F 2F 77 77 77 2E 74 72 61 6E 73 66 6F 72 6D 69 63 65 2E 63 6F 6D 2F 74 75 74 6F 72 69 61 6C 73 2F 69 6E 64 65 78 2E 70 68 70 
+>
+68 74 74 70 3A 2F 2F 77 77 77 2E 74 72 61 6E 73 66 6F 72 6D 69 63 65 68 61 63 6B 65 72 73 2E 63 6F 6D 2F 20 20 20 20 20 20 20 20 20 20 20 20
+
+========================================================================================
+
+Nadar com queijo- ATUALIZADO POR CODE MASTER OFICIAL, NÃO ALTERE OS ** DA AOB!!
+
+MARQUE COPY E WRIT!!
+
+F2 0F 59 CA F2 0F 5C C1 ** DB 0F 84
+>
+F2 0F 40
+
+========================================================================================
+
+SPEED HACK PARA SHAMAN - CRIADO POR SHOWER , ATUALIZADO POR CODE MASTER!
+PORTANTO CRÉDITOS A NÓS DOIS!
+
+MARQUE WRIT E COPY!
+
+F2 0F 59 C1 66 0F D6 45 ?? 8D ?? ?? ?? 00 00 8d 55
+>
+F2 0F 2A
+
+======================================================================================
+
+TITULOS HACK (EXCLUSIVO 2015) CRIADOR OFICIAL CODE MASTER!! NAO EXISTE NENHUM OUTRO SEM BUGS
+E SEM DC!! DEIXE A POHA DOS CRÉDITOS!!
+
+NAO MARQUE COPY E WRIT!!
+
+52 00 61 00 74 00 69 00 6E 00 68 00 6F 00 A4 00 53 00 6F 00 75 00 72 00 69 00 73 00 5F 00 47 00
+>
+48 00 61 00 63 00 6B 00 65 00 72 00 20 00 00 00 00 00 6F 00 75 00 72 00 69 00 73 00 5F 00 47 00
+
+digite /title 0 para usar!!
+
+
+======================================================================================
+
+
+TELEPORT HOLE , TELEPORT CHEESE , TELEPORT JUMPER , UP ALL HACK , SKY BORN!!
+
+AOB PRONTA, FIXE APENAS O HACK DESEJADO!! ESSA AOB FOI CRIADA POR CODE MASTER, CONTEM 5 RESULTADOS, CADA RESULTADO É UM HACK!!
+
+F2 0F 58 ?? 85 DB 0F 84 ?? 01 00 00 66 0F D6 43 ?? 8B
+>
+?? ?? 59
+
+SEM DC EXCLUSIVO CODE MASTER, DEIXE CREDITOS!!
+
+=======================================================================================
+
+
+STRING HACKS TFM EXCLUSIVO HACK CODE MASTER, ALTERA O MENU DE SALAS
+
+NAO MARQUE COPY E WRIT
+
+Vanilla > MeuPau!
+56 61 6E 69 6C 6C 61
+>
+4D 65 75 50 61 75 21
+
+
+NORMAL> TH
+4E 6F 72 6D 61 6C
+>
+54 48 00 54 48 21 20 3E 3E
+
+MUSIC> Code
+4D 75 73 69 63
+>
+43 6F 64 65 00
+
+DEFILANTE > BumBum
+
+44 65 66 69 6C 61 6E 74 65 
+>
+42 75 6D 42 75 6D 20 3A 44
+
+
+Survivor> Troll
+53 75 72 76 69 76 6F 72 00 21
+>
+54 72 6F 6C 6C 00 6F 72 00 21
+
+
+Racing > Speed
+52 61 63 69 6E 67
+>
+53 70 65 65 64 00
+
+
+=====================================================================================
+
+
+FLOOR HACK EXCLUSIVO SEM DC! COLOQUE HOTKEY !! CRIADO POR CODE MASTER
+
+PRA NAO DIZER Q FIZ ESSA POHA NA BASE, DE SCAN em 0.5 E ACHE O PISO HACK, DEPOIS DEBUGA ESSA POHA E PEGA A AOB!!
+
+F3 0F 7E ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F3 0F 7E ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8D 8F
+>
+Subir: F3 0F 00
+Reto: F3 0F 10
+Cair: F3 0F 7E
+
+=======================================================================================
+
+Aim cheese ATUALIZADO POR CODE MASTER, DC EM BOOTCAMPS E VANILLAS!! EM NORMAIS E RACING COLOQUE KEY!!
+
+F2 0F 59 ?? 66 0F 57 C9 F2 0F 2A C8 F2 0F 59 C9 F2 0F 58 C1 83 EC 08 83 EC 08 66 0F D6 04 24 E8
+>
+F2 0F 10
+
+foi do adobe.dll a partir do aim cheese que surgiu o instant win do drk e do shower ;) , Dica pra vcs!
+
+======================================================================================
+
+WJ FAKE (PULE ANTES DE DAR SCAN) ATUALIZADO BY CODE MASTER
+
+8B ?? ?? 00 00 00 85 ?? 74 ?? 8D 89 ?? ?? 00 00
+>
+89
+
+======================================================================================
+
+rato voador ATUALIZADO BY CODE MASTER OFICIAL!!
+
+F2 0F 59 C1 66 0F ?? ?? ?? F3 0F 7E ?? ?? 00 00 00
+>
+F2 0f 5d
+
+=======================================================================================
+ 
+Chat invisivel  (NAO É MEU, NAO SEI QUEM CRIOU)
+
+C2 C3 8B 4C 24 04 53 56 8B C1 BA FF 00 FF 00 BE 00 01 ?? 00
+>
+C2 C3 8B 4C 24 04 53 56 8B C1 BA FF 00 74 00 BE 00 01 ?? 00
+
+=======================================================================================
+
+Piso trampolin COLOQUE KEY (CRIADO ORIGINALMENTE POR CODE MASTER!)
+
+F2 0F 59 ** 66 0F 57 05 ?? ?? ?? ?? ?? 0F ?? ?? ?? ?? ?? ?? ?? 66 0F D6
+>
+** 0F 58
+
+=======================================================================================
+
+MATRIX HACK! ATUALIZADO POR CODE MASTER!!
+
+F2 0F 5E C1 66 0F D6 86 ** 00 00 00 8B 7E
+>
+F2 0F 10
+
+=======================================================================================
+sempre alma gemea (CREDITOS A KROPIS!!)
+
+8B B7 ?? ?? 00 00 85 F6 0F 84 ?? ?? 00 00 8B 75 90 85 F6 0F 84
+>
+89
+
+nunca alma gemea
+89 86 ?? 01 00 00 C7 85 3C FF FF FF ?? 08 00 00 
+>
+8B
+
+======================================================================================
+
+FLY HACK (EXCLUSIVO SEM DC, COLOQUE KEYS!) <- Sem dc para quem sabe mecher - BY CODE MASTER
+
+f3 0f 7e 45 ?? ?? ?? ?? 41 10 85 c0 74 1c
+>
+f3 0f 10
+
+====================================================================================
+SPEED VENTO
+
+?? ?? ?? ?? 99 99 0B 40
+>
+02 05 09 02 00 00 00 00
+>
+?? ?? ?? ?? 99 99 0B 41
+
+=====================================================================================
+WJ FLY (ATUALIZADO POR CODE MASTER, SEM DC PARA QUEM SABE USAR!!)
+
+F3 0F 7E 45 E0 8B C8 8B 41 10 85 C0 74 1C 66 0F D6 ?? ?? 66 0F 2E C1
+>
+F3 0F 10
+
+=======================================================================================
+
+Iten de 4001 custa 1 queijo CRIADO EXCLUSIVAMENTE POR CODE MASTER,DEIXE CRÉDITOS!
+
+A1 0F 00 00 00 00 00 00 
+>
+01 00 00 00 00 00 00 00 D2 
+
+TUDO CUSTA 1 QJ PELOS DE GRAÇA, CREDITOS A CODE MASTER!! CRIADOR OFICIAL!
+
+70 17 00 00 00 00 00 00
+>
+01 00 00 00 00 00 00 00
+
+========================================================================================
+
+TODOS OS HACKS ACIMA FORAM CRIADOS E ATUALIZADOS POR CODE MASTER, DEIXE CRÈDITOS !!!

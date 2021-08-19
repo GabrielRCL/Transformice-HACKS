@@ -1,0 +1,3605 @@
+;
+;	This is an example language file and should be used only for translating.
+;	AdvOR already has all strings from this file as the "default" language, so there is no need to load them from this file.
+;
+;	Supported formats for language files are ANSI, UNICODE and UTF-8. The format of AdvOR.log is UTF-8.
+;	All language definitions must start with a 4-digit LANGUAGE_STRING_ID followed by a space and the string itself.
+;	Lines starting with ";" are considered comments and are ignored by AdvOR.
+;	Lines that don't start with a 4-digit number followed by a space are considered to be a part of previous string.
+;	Empty definitions are reserved for future versions.
+;
+;
+;	The string 0000 is shown in Debug when this language file is loaded.
+;	Use it to show some useful information about this language file, like a copyright message, terms of use, etc.
+0000 You selected the English language file, which is the same as the default language. To speed up AdvOR's loading process, select the default language instead.
+;
+;	Column names for the list with hidden services
+0002 Real port(s)
+0003 Real address
+0004 Virtual port(s)
+0005 Onion address
+;
+;	Column names for the list with exit nodes
+0006 Country
+0007 Address
+0008 Node name
+0009 Bandwidth
+;
+;	Menu option names, use "&" to underline a letter
+0010 &Intercept new program ...
+0011 &Clear list
+0012 &Copy
+0013 Show Window
+0014 Intercept ...
+0015 &Quick start
+0016 Release
+0017 New Identity
+0018 Select IP
+0019 &Connect
+0020 Save Settings
+0021 Exit
+;
+;	Debug window, logging
+0022 [8] Debug
+0023 [7] Info
+0024 [6] Proxy
+0025 [5] Notice
+0026 [4] Warning
+0027 [3] Error
+;
+;	Exit selection dialog
+0028 << Random country >>
+0029 >> No exit <<
+;
+;
+;	Popup MessageBox'es
+;
+;	Title for error messages
+0030 Error
+;	Error messages
+0031 Unable to write configuration to disk.
+0032 Unable to seed random number generator. Exiting.
+;	Title for notification on saving settings
+0033 Save settings
+;	Notification message for saving settings
+0034 Options were saved.
+;	Title for notifications on changing the exit node
+0035 New identity
+;	Notification messages for changing the exit node
+0036 All new connections will appear from a different IP
+0037 Your connections no longer exit to OR network.
+;	Title for notification message when releasing a process
+0038 Release
+;	Notification messages for releasing a process
+0039 The process with PID %d was released successfully
+0040 There was an error while trying to release the process with PID %d.
+AdvOR.dll was not unloaded.
+You need to restart your application.
+;	Title for favorites notification message
+0041 Favorites
+;	Notification message when adding to favorites
+0042 Added to favorites: %s
+;	Title for banlist notification message
+0043 Bans
+;	Notification message when adding to banlist
+0044 Added to banlist: %s
+;	Title for command-line help
+0045 Advanced Onion Router help
+;	Command-line help
+0046 The following command-line parameters are accepted:
+
+--start			Connects to OR network at startup
+--minimize			Minimize at startup
+--QuickStart "menu option"	Starts the application associated with requested QuickStart menu option
+			 using its saved interception parameters and command-line parameters
+--exec [file]		Execute and intercept at startup a program.
+			If there already is an existing AdvOR instance, it will receive this parameter.
+--read-only		Do not write any files to disk (assume running from a read-only / write protected disk)
+--select-exit [IP|country]	Selects default exit to a router IP or a country
+--verify-lng [file]		Verify if a language file has errors in it
+--no-seh			Disable AdvOR's built-in exception handler
+--option value		Updates a configuration option with a new value
+--help			This message
+
+;
+;
+;	The list with option pages
+0047 ■ Proxy
+0048 Authorities
+0049 Router restrictions
+0050 Banned addresses
+0051 Connections
+0052 Hidden services
+0053 ■ System
+0054 Hosted services
+0055 Become a Server
+0056 Debug
+0057 ■ About
+0058 Bypass ISP filtering
+0059 ■ OR network
+0060 ■ Plugins
+0061 HTTP headers
+;
+;
+;	Main dialog
+;
+0062 ► Connect
+0063 &New identity
+0064 S&ave settings
+0065 Always on t&op
+0066 Minimize to &tray
+0067 E&xit
+0068 Save to AdvOR.&log
+0069 Auto-&refresh
+0070 &Clear window
+0071 Bandwidth rate:
+0072 Bandwidth Burst :
+0073 Advertised Bandwidth:
+0074 Relay Bandwidth Rate:
+0075 Relay Bandwidth Burst:
+0076 ISP traffic limit:
+0077 Traffic limit availability (day|week|month [day] HH:MM):
+0078 Maximum number of connections:
+0079 Send / recv Buffer Size (bytes):
+0080 Keepalive / idle time for connections (seconds):
+0081 Use this local IP for outgoing connections:
+0082 Firewall restrictions ([reject] range|*:port|*), each rule on a new line:
+0083 Advertised OS version:
+0084 Advertised Tor version:
+0085 Connect automatically
+0086 Minimize at startup
+0087 Start with Windows
+0088 Use hardware acceleration for cryptographic functions (not recommended)
+0089 Try to write to disk less frequently (assume running on flash memory)
+0090 Control port:
+0091 local address:
+0092 Require authentication with password hash(es):
+0093 Filter messages that have one of these strings in "Debug" window:
+0094 Fake local time
+0095 Resolve only to fake IPs
+0096 Disallow non TCP sockets
+0097 Change program's icon while it is intercepted
+0098 Local address:
+0099 Run ...
+0100 Exclusive exit
+0101 
+0102 
+0103 
+0104 
+0105 
+0106 
+0107 
+0108 
+0109 Proxy port:
+0110 Proxy address:
+0111 Restrict connections only from these IPs or IP ranges ([accept|reject] IP/range):
+0112 Handshake timeout (seconds):
+0113 Reject application connections where the application is doing a DNS resolve
+0114 Allow non RFC 953 hostnames
+0115 
+0116 Banned ports (port1,port2,...):
+0117 Banned addresses, each address on a new line:
+(This list can also be updated from the "OR network" context menus)
+0118 Circuit build timeout (seconds):
+0119 Circuit idle timeout until closing it (seconds):
+0120 Ports for services that have long-running connections:
+0121 Period to consider whether to build a new circuit (seconds):
+0122 Avoid reuse if a circuit is too old (expiration time in seconds):
+0123 Circuit timeout when entering hibernation (seconds):
+0124 Use bridge relays (relays that are not listed in the main Tor directory)
+0125 Update bridge descriptors from authorities instead of the bridge itself
+0126 Use same entry servers (#):
+0127 Re-init list
+0128 These addresses will always be associated with the same exit nodes
+0129 Node families (node1,node2,...)
+0130 Tracked hosts
+0131 Exit node association expiration time (seconds):
+0132 Allowed invalid nodes (onion routers)
+0133 [&E]ntry
+0134 e[&X]it
+0135 Middle
+0136 &Rendezvous
+0137 Introduction
+0138 Avoid using in same circuit nodes from same
+0139 Do not use the public key step for the entry node when creating circuits (faster)
+0140 Download extra information about nodes (that is not used by Tor)
+0141 Use only [E]ntry routers from favorites
+0142 Use only e[X]it nodes from favorites
+0143 Banned routers ([X] nicknames or hashes), each router on a new line:
+(This list can also be updated from the "OR network" context menus)
+0144 Favorite routers ([E|X] nicknames or hashes), each router on a new line:
+(This list can also be updated from the "OR network" context menus)
+0145 Test nodes (node1,node2,...):
+0146 Port:
+0147 Local address:
+0148 Nickname:
+0149 Contact information (e-mail):
+0150 Node advertised address (IP or DNS):
+0151 Don't do self-reachability testing
+0152 Act as a bridge
+0153 Make country statistics
+0154 Maximum onionskins queued for decrypt:
+0155 CPU's:
+0156 To become an exit node, you must accept the address *:*
+0157 Accept only these addresses (range:port):
+0158 Banned IPs / ports (range:port)
+0159 Publish:
+0160 Publish all now
+0161 Directory Authorities - prepend ";" to mark a line as a comment
+0162 Status:
+0163 Always select a random directory authority (that is not marked as a comment)
+0164 All directory actions are private (use an OR circuit for directory connections)
+0165 Network information never expires (always download it manually)
+0166 Refresh network information now
+0167 Address resolution timeout (seconds):
+0168 Wait until at least 3/4 usable descriptors are downloaded (default is 1/4)
+0169 Never send real information about local time to routers or directory servers
+0170 Randomize "local time" at startup by max. + / -
+0171 seconds
+0172 Also, adjust reported local time to a random router's local time
+0173 Maximum router descriptor download failures:
+0174 Remove cached consensus if it is older than
+0175 days
+0176 Real port(s):
+0177 Real address:
+0178 Select ...
+0179 Virtual port(s):
+0180 Onion address:
+0181 Add
+0182 Delete
+0183 Publish now
+0184 Introduction points:
+0185 Period to retry building introduction circuits (sec.):
+0186 Maximum number of introduction circuits per period:
+0187 Maximum rendezvous failures before giving up:
+0188 Rendezvous connection timeout (sec.):
+0189 Period to publish hidden server information (sec.):
+0193 Save to %s
+0194 Circuit length: %d routers
+0195 Language:
+0196 Subnets
+0197 Countries
+0198 Bridge
+0199 Hidden
+0200 
+0201 
+0202 
+0203 
+0204 
+0205 
+0206 
+0207 
+0208 
+0209 
+0210 
+0211 
+0212 
+0213 
+0214 
+;
+;	Exit node selection dialog
+;
+0215 Select an Exit Node
+0216 Country:
+0217 &Select
+0218 Add to &favorites
+0219 &Ban selected node
+0220 C&ancel
+;
+;	Process finder dialog
+;
+0221 Advanced Onion Router Process Finder
+0222 Drag this object over the window created by a process you want to be intercepted:
+0223 &Intercept
+0224 C&ancel
+;
+;	Executable file open dialog (Run)
+;
+0225 &Command line parameters:
+0226 &Remember settings for this application (Add to Quick Start)
+0227 Program &name:
+0228 
+0229 
+;
+;
+;	Log messages shown in Debug window
+;
+0230 Cleaned freelist for %d-byte chunks: original length %d, kept %d, dropped %d.
+0231 ====== Buffer freelists:
+0232 %I64u bytes in %d %d-byte chunks [%I64u misses; %I64u frees; %I64u hits]
+0233 %I64u allocations in non-freelist sizes
+0234 recv() failed: WSAENOBUFS. Not enough ram?
+0235 Encountered eof on fd %d
+0236 Read %ld bytes. %d on inbuf.
+0237 write() failed: WSAENOBUFS. Not enough ram?
+0238 write() would block, returning.
+0239 flushed %d bytes, %d ready to flush, %d remain.
+0240 headers too long.
+0241 headers not all here yet.
+0242 headerlen %d, bodylen %d.
+0243 headerlen %d larger than %d. Failing.
+0244 bodylen %d larger than %d. Failing.
+0245 Content-Length is less than zero; it looks like someone is trying to crash us.
+0246 Got a contentlen of %d.
+0247 body not all here yet.
+0248 bodylen reduced to %d.
+0249 socks5: offered methods don't include 'no auth'. Rejecting.
+0250 socks5: accepted method 0xE0
+0251 socks5: accepted method 0
+0252 socks5: checking request
+0253 socks5: command %d not recognized. Rejecting.
+0254 socks5: ipv4 address type
+0255 socks5 IP takes %d bytes, which doesn't fit in %d. Rejecting.
+0256 Your application (using socks5 to port %d) is giving Tor only an IP address. Applications that do DNS resolves themselves may leak information. Consider using Socks4A (e.g. via privoxy or socat) instead. For more information, please see http://wiki.torproject.org/noreply/TheOnionRouter/TorFAQ#SOCKSAndDNS.%s
+0257 socks5: fqdn address type
+0258 socks5 received RESOLVE_PTR command with hostname type. Rejecting.
+0259 socks5 hostname is %d bytes, which doesn't fit in %d. Rejecting.
+0260 Your application (using socks5 to port %d) gave Tor a malformed hostname: %s. Rejecting the connection.
+0261 Your application (using socks5 to port %d) gave Tor a hostname, which means Tor will do the DNS resolve for you. This is good.
+0262 socks5: unsupported address type %d. Rejecting.
+0263 socks4: command %d not recognized. Rejecting.
+0264 socks4: Port or DestIP is zero. Rejecting.
+0265 socks4: destip not in form 0.0.0.x.
+0266 socks4 addr (%d bytes) too long. Rejecting.
+0267 socks4: successfully read destip (%s)
+0268 Socks4 user name too long; rejecting.
+0269 socks4: Username not here yet.
+0270 Your application (using socks4 to port %d) is giving Tor only an IP address. Applications that do DNS resolves themselves may leak information. Consider using Socks4A (e.g. via privoxy or socat) instead. For more information, please see http://wiki.torproject.org/noreply/TheOnionRouter/TorFAQ#SOCKSAndDNS.%s
+0271 socks4: No part of destaddr here yet.
+0272 socks4: Destaddr too long.
+0273 socks4: Destaddr not all here yet.
+0274 socks4: Destaddr too long. Rejecting.
+0275 Your application (using socks4a to port %d) gave Tor a hostname, which means Tor will do the DNS resolve for you. This is good.
+0276 socks4: Everything is here. Success.
+0277 Your application (using socks4 to port %d) gave Tor a malformed hostname: %s. Rejecting the connection.
+0278 Attempt to bypass proxy settings with address  %s:%u .
+0279 %s: Attempt to bypass proxy settings with address %s:%u .
+0280 Not a proxy request: %s
+0281 Socks version %d not recognized. (Tor is not an http proxy.) - %s
+;
+0282 Chosen circID %u.
+0283 circuit built!
+0284 Tor has successfully opened a circuit. Looks like client functionality is working.
+0285 circuit_send_next_onion_skin failed.
+0286 Trying to pick a circuit ID for a connection from a client with no identity.
+0287 Conn open. Delivering first onion skin.
+0288 connect to firsthop failed. Closing.
+0289 Generating cpath hop failed.
+0290 First hop: finished sending %s cell to '%s'
+0291 First skin; sending create cell.
+0292 connecting in progress (or finished). Good.
+0293 Looking for firsthop '%s:%u'
+0294 Next router is %s: %s 
+0295 No unused circ IDs. Failing.
+0296 or_conn failed. Closing circ.
+0297 or_conn to %s/%s, status=%d
+0298 Found circ, sending create cell.
+0299 send_next_onion_skin failed; circuit marked for closing.
+0300 starting to send subsequent skin.
+0301 Now checking whether ORPort %s:%d%s %s reachable... (this may take up to %d minutes -- look for log messages indicating success)
+0302 failed to get unique circID.
+0303 onion_skin_create (first hop) failed.
+0304 Trying to extend to a non-IPv4 address.
+0305 onion_skin_create failed.
+0306 Sending extend relay cell.
+0307 Your system clock just jumped %d seconds %s; assuming established circuits no longer work.
+0308 n_conn already set. Bug/attack. Closing.
+0309 conn to next hop already launched. Bug/attack. Closing.
+0310 Got an extend cell, but running as a client. Closing.
+0311 Wrong length %d on extend cell. Closing circuit.
+0312 Client asked me to extend to zero destination port or addr.
+0313 Client asked me to extend without specifying an id_digest.
+0314 Client asked me to extend back to the previous hop.
+0315 Next router (%s:%d): %s
+0316 Launching n_conn failed. Closing circuit.
+0317 n_conn is %s:%u
+0318 Forward cipher initialization failed.
+0319 Backward cipher initialization failed.
+0320 got extended when circ already built? Closing.
+0321 onion_skin_client_handshake failed.
+0322 fast_client_handshake failed.
+0323 CREATED cell type did not match CREATE cell type.
+0324 Finished building %scircuit hop:
+0325 Killing a layer of the cpath.
+0326 Marking stream %d for close because of truncate.
+0327 finished
+0328 init digest forward 0x%.8x, backward 0x%.8x.
+0329 Circuit initialization failed
+0330 Finished sending 'created' cell.
+0331 Chosen route length %d (%d/%d routers suitable).
+0332 Not enough acceptable routers (%d). Discarding this circuit.
+0333 Not enough routers: cutting routelen from %d to %d.
+0334 Choosing exit node; %d connections are pending
+0335 Skipping node %s -- it's me.
+0336 Skipping node %s (index %d) -- invalid router.
+0337 Skipping node %s (index %d) -- it rejects all.
+0338 %s is supported. n_supported[%d] now %d.
+0339 %s (index %d) would reject this stream.
+0340 %s is new best supported option so far.
+0341 Found %d servers that might support %d/%d pending connections.
+0342 We couldn't find any live%s%s routers; falling back to list of all routers.
+0343 All routers are down or won't exit -- choosing a doomed exit at random.
+0344 Try %d: '%s' is a possibility.
+0345 Chose exit server '%s'
+0346 No specified exit routers seem to be running, and StrictExitNodes is set: can't choose an exit.
+0347 Unhandled purpose %d
+0348 Requested exit node '%s' is in ExcludeNodes, or ExcludeExitNodes, using anyway.
+0349 Launching a one-hop circuit for dir tunnel.
+0350 Using requested exit node '%s'
+0351 failed to choose an exit server
+0352 Couldn't extend circuit to new point '%s'.
+0353 Contemplating whether router %d (%s) is a new option.
+0354 Nope, the directory says %d is not running.
+0355 Nope, the directory says %d is not valid.
+0356 I like %d. num_acceptable_routers now %d.
+0357 Contemplating intermediate hop: random choice.
+0358 Path is complete: %d steps long
+0359 Path is %d long; we want %d
+0360 Failed to find node for hop %d of our path. Discarding this circuit.
+0361 Chose router %s for hop %d (exit is %s)
+0362 Entry guard %s (%s) is %s: marking as unusable.
+0363 Entry guard %s (%s) is no longer unusable: marking as ok.
+0364 Chose '%s' as new entry guard.
+0365 Entry guard '%s' (%s) %s. (Version=%s.)  Replacing it.
+0366 Entry guard '%s' (%s) has been down or unlisted since %s local time; removing.
+0367 Summary: Entry '%s' is %s, %s%s%s, and %s.
+0368     (%d/%d entry guards are usable/new)
+0369 Entry guard '%s' (%s) is now reachable again. Good.
+0370 Connection to never-contacted entry guard '%s' (%s) failed. Removing from the list. %d/%d entry guards usable/new.
+0371 Unable to connect to entry guard '%s' (%s). Marking as unreachable.
+0372 Failed to connect to unreachable entry guard '%s' (%s).  It has been unreachable since %s.
+0373 Connected to new entry guard '%s' (%s). Marking earlier entry guards up. %d/%d entry guards usable/new.
+0374 New EntryNodes config option detected. Will use.
+0375 Adding configured EntryNodes '%s'.
+0376 EntryGuardAddedBy line is not long enough.
+0377 EntryGuardAddedBy line %s does not begin with hex digest
+0378 Unexpected key %s
+0379 Can't read time %s in EntryGuardAddedBy
+0380 ask_bridge_directly=%d (%d, %d, %d)
+0381 Bridge at '%s:%d' isn't reachable by our firewall policy. %s.
+0382 Asking bridge authority instead
+0383 Skipping
+0384 Fetching bridge info '%s' from bridge authority.
+0385 new bridge descriptor '%s' (%s)
+0386 found one: %s
+0387 any_known %d, any_running %d
+;
+0388 or_conn to %s, %d pending circs
+0389 Unknown circuit state %d
+0390 Conn %d has %s circuit: circID %d (other side %d), state %d (%s), born %d:
+0391 circuit matches p_conn, but not in hash table (Bug!)
+0392 circuit matches n_conn, but not in hash table (Bug!)
+0393 Hunting for a circ to cannibalize: purpose %d, uptime %d, capacity %d, internal %d
+0394 Duplicate call to circuit_mark_for_close at %s:%d (first at %s:%d)
+0395 Specified 'at-origin' non-reason for ending circuit, but circuit was not at origin. (called %s:%d, purpose=%d)
+0396 Reason %d out of range at %s:%d
+0397 Failed intro circ %s to %s (awaiting ack). Removing from descriptor.
+0398 Unexpected state %d
+;
+0399 Not considering circuit with unknown router.
+0400 Skipping one-hop circuit.
+0401 There is an intro circuit being created right now, but it has already taken quite a while. Starting one in parallel.
+0402 Timing out introduction circuit which we would not have done if it had been a general circuit.
+0403 Considering %sopen purp %d to %s (circid %d).(clean).
+0404 Considering %sopen purp %d to %s (circid %d). %d secs since dirty.
+0405 Abandoning circ %s:%d:%d (state %d:%s, purpose %d)
+0406 Abandoning circ %d (state %d:%s, purpose %d)
+0407 Port %d is already being handled; removing.
+0408 Port %d is not handled.
+0409 Have %d clean circs (%d internal), need another exit circ.
+0410 Have %d clean circs (%d internal), need another internal circ for my hidden service.
+0411 Have %d clean circs (%d uptime-internal, %d internal), need another hidserv circ.
+0412 Creating a new testing circuit.
+0413 Edge connection not in circuit's list.
+0414 Closing n_circ_id %d (dirty %d secs ago, purp %d)
+0415 Closing circuit that has been unused for %d seconds.
+0416 Our testing circuit (to see if your ORPort is reachable) has failed. I'll try again later.
+0417 Our circuit failed to get a response from the first hop (%s:%d). I'm going to try to rotate to a better connection.
+0418 Couldn't connect to Alice's chosen rend point %s (%s hop failed).
+0419 Haven't fetched enough directory info yet; canceling circuit launch.
+0420 Cannibalizing circ '%s' for purpose %d
+0421 unexpected purpose %d when cannibalizing a circ.
+0422 %d failures so far, not trying.
+0423 n_circuit_failures now %d.
+0424 Application request when we're believed to be offline. Optimistically trying known bridges again.
+0425 Application request when we're believed to be offline. Optimistically trying directory fetches again.
+0426 No Tor server allows exit to %s:%d. Rejecting.
+0427 Requested exit point '%s' would refuse request. %s.
+0428 Trying others
+0429 Closing
+0430 one on the way!
+0431 No intro points for '%s': refetching service descriptor.
+0432 Chose '%s' as intro point for '%s'.
+0433 considering %d, %s
+0434 Broken exit digest on tunnel conn. Closing.
+0435 Broken address %s on tunnel conn. Closing.
+0436 Requested exit point '%s' is not known. %s.
+0437 No safe circuit (purpose %d) ready for edge connection; delaying.
+0438 attaching new conn to circ. n_circ_id %d.
+0439 Registering new tracked exit host %s.
+0440 Tried for %d seconds to get a connection to %s:%d. Giving up.
+0441 Attaching apconn to circ %d (stream %d sec old).
+0442 rend joined circ %d already here. attaching. (stream %d sec old)
+0443 pending-join circ %d already here, with intro ack. Stalling. (stream %d sec old)
+0444 Intro circ %d present and awaiting ack (rend %d). Stalling. (stream %d sec old)
+0445 Closing introduction circuit that we built in parallel.
+0446 ready rend circ %d already here (no intro-ack yet on intro %d). (stream %d sec old)
+0447 found open intro circ %d (rend %d); sending introduction. (stream %d sec old)
+0448 Intro (%d) and rend (%d) circs are not both ready. Stalling conn. (%d sec old)
+;
+0449 That call just took %ld ms.
+0450 That call took us back in time!
+0451 At end of second: %d creates (%d ms), %d createds (%d ms), %d relays (%d ms), %d destroys (%d ms)
+0452 Cell of unknown type (%d) received. Dropping.
+0453 At end of second: %d versions (%d ms), %d cert (%d ms)
+0454 Variable-length cell of unknown type (%d) received.
+0455 Received create cell but we're shutting down. Sending back destroy.
+0456 Received create cell (type %d) from %s:%d, but we're a client. Sending back a destroy.
+0457 Received create cell with unexpected circ_id %d. Closing.
+0458 Received CREATE cell (circID %d) for known circ. Dropping (age %d).
+0459 Details: nickname "%s", platform %s.
+0460 Failed to hand off onionskin. Closing.
+0461 success: handed off onionskin.
+0462 Failed to generate key material. Closing.
+0463 Failed to reply to CREATE_FAST cell. Closing.
+0464 (circID %d) unknown circ (probably got a destroy earlier). Dropping.
+0465 got created cell from Tor client? Closing.
+0466 at OP. Finishing handshake.
+0467 circuit_finish_handshake failed.
+0468 Moving to next skin.
+0469 circuit_send_next_onion_skin failed.
+0470 Converting created cell to extended relay cell, sending.
+0471 unknown circuit %d on connection from %s:%d. Dropping.
+0472 circuit in create_wait. Closing.
+0473 Received an inbound RELAY_EARLY cell on circuit %d from %s:%d.  Closing circuit.
+0474 Received too many RELAY_EARLY cells on circ %d from %s:%d.  Closing circuit.
+0475 circuit_receive_relay_cell (%s) failed. Closing.
+0476 Received for circID %d.
+0477 Delivering 'truncated' back.
+0478 Received a VERSIONS cell on a connection with its version already set to %d; dropping
+0479 Couldn't find a version in common between my version list and the list in the VERSIONS cell; closing connection.
+0480 Used version negotiation protocol to negotiate a v1 connection. That's crazily non-compliant. Closing connection.
+0481 Negotiated version %d with %s:%d; sending NETINFO.
+0482 Received a NETINFO cell on %s connection; dropping.
+0483 Received a NETINFO cell on non-handshaking connection; dropping.
+0484 Addresses too long in netinfo cell; closing connection.
+0485 Bad address in netinfo cell; closing connection.
+0486 Received NETINFO cell with skewed time from server at %s:%d.  It seems that our clock is %s by %s, or that theirs is %s. Tor requires an accurate clock to work: please check your time and date settings.
+0487 ahead
+0488 behind
+0489 Got good NETINFO cell from %s:%d; OR connection is now open, using protocol version %d
+;
+0490 Acting on config options left us in a broken state. Dying.
+0491 You cannot set both DirServers and Alternate*Authority.
+0492 You have used DirServer or AlternateDirAuthority to specify alternate directory authorities in your configuration. This is potentially dangerous: it can make you look different from all other Tor users, and hurt your anonymity. Even if you've specified the same authorities as Tor uses by default, the defaults could change in the future. Be sure you know what you're doing.
+0493 Closing old %s on %s:%d
+0494 Closing partially-constructed listener %s on %s:%d
+0495 Previously validated Bridge line could not be added!
+0496 Previously validated hidden services line could not be added!
+0497 Previously validated client authorization for hidden services could not be added!
+0498 Error parsing already-validated policy options.
+0499 Unrecognized value in AllowInvalidNodes
+0500 Error creating cookie authentication file.
+0501 Error loading rendezvous service keys
+0502 Error in accounting options
+0503 Changed to using entry guards or bridges, or changed preferred or excluded node lists. Abandoning previous circuits.
+0504 We are no longer acting as a bridge. Forgetting GeoIP stats.
+0505 Worker-related options changed. Rotating workers.
+0506 Error initializing keys; exiting
+0508 Choosing default nickname '%s'
+0509 DirPortFrontPage file '%s' not found. Continuing anyway.
+0510 The configuration option '%s' is deprecated; use '%s' instead.
+0511 Syntax error in command line parameter "--select-exit" - expected a country ID or an IP
+0512 Commandline: parsed keyword '%s', value '%s'
+0513 The abbreviation '%s' is deprecated. Please use '%s' instead
+0514 Skipping obsolete configuration option '%s'
+0515 Found unrecognized option '%s'; saving it.
+0516 Linelist option '%s' has no value. Skipping.
+0517 Unknown option '%s'.  Failing.
+0518 You asked me for the value of an obsolete config option '%s'.
+0519 Can't return context-sensitive '%s' on its own
+0520 Unknown type %d for known key '%s'
+0521 Failed to assign default: %s
+0522 Error obtaining local hostname
+0523 Guessed local host name as '%s'
+0524 Could not resolve local Address '%s'. Failing.
+0525 Could not resolve guessed local hostname '%s'. Trying something else.
+0526 Could not get local interface IP address. Failing.
+0527 Learned IP address '%s' for local interface. Using that.
+0528 Guessed local hostname '%s' resolves to a private IP address (%s).  Trying something else.
+0529 Could not get local interface IP address. Too bad.
+0530 Interface IP address '%s' is a private address too. Ignoring.
+0531 Address '%s' resolves to private IP address '%s'. Tor servers that use the default DirServers must have public IP addresses.
+0532 Address '%s' resolves to private IP address '%s'. Please set the Address config option to be the IP address you want to use.
+0533 Resolved Address to '%s'.
+0534 Your IP address seems to have changed to %s. Updating.
+0535 Config_get_assigned_option() generated something we couldn't config_assign(): %s
+0536 Failed to validate default config.
+0537 Internal error writing option value
+0538 Internal error writing option value %s
+0539 You specified a public address '%s' for a %s. Other people on the Internet might find your computer and use it as an open %s. Please don't allow this unless you have a good reason.
+0540 NoPublish is obsolete. Use PublishServerDescriptor instead.
+0541 Failed to resolve/guess local address. See logs for details.
+0542 SocksPort, TransPort, NatdPort, DNSPort, and ORPort are all undefined, and there aren't any hidden services configured. Tor will still run, but probably won't do anything.
+0543 Authoritative directory servers can't set UseEntryGuards. Disabling.
+0544 Authoritative directories always try to download extra-info documents. Setting DownloadExtraInfo.
+0545 Converting FascistFirewall and FirewallPorts config options to new format: "ReachableAddresses %s"
+0546 MinUptimeHidServDirectoryV2 option must be at least 0 seconds. Changing to 0.
+0547 RendPostPeriod option is too short; raising to %d seconds.
+0548 RendPostPeriod is too large; clipping to %ds.
+0549 CircuitBuildTimeout option is too short; raising to %d seconds.
+0550 MaxCircuitDirtiness option is too short; raising to %d seconds.
+0551 Failed to parse accounting options. See logs for details.
+0552 You have a ControlListenAddress set to accept unauthenticated connections from a non-local address. This means that programs not running on your computer can reconfigure your Tor, without even having to guess a password. That's so bad that I'm closing your ControlPort for you. If you need to control your Tor remotely, try enabling authentication and using a tool like stunnel or ssh to encrypt remote access.
+0553 You have a ControlListenAddress set to accept connections from a non-local address.  This means that programs not running on your computer can reconfigure your Tor. That's pretty bad, since the controller protocol isn't encrypted! Maybe you should just listen on 127.0.0.1 and use a tool like stunnel or ssh to encrypt remote connections to your control port.
+0554 ControlPort is open, but no authentication method has been configured. This means that any program on your computer can reconfigure your Tor. That's bad! You should upgrade your Tor controller as soon as possible.
+0555 TestingTorNetwork is set. This will make your node almost unusable in the public Tor network, and is therefore only advised if you are building a testing Tor network!
+0556 Duplicate -f options on command line.
+0557 Opening config file "%s"
+0558 Configuration file "%s" not present, using reasonable defaults.
+0559 Unable to open configuration file "%s".
+0560 Unparseable bandwidth history state: %s
+0561 Skipping invalid argument '%s' to MapAddress
+0562 Ignoring extra arguments to MapAddress.
+0563 MapAddress '%s' has too few arguments. Ignoring.
+0564 Too few arguments to Bridge line.
+0565 Error parsing Bridge address '%s'
+0566 Missing port in Bridge address '%s'
+0567 Key digest for Bridge is wrong length.
+0568 Unable to decode Bridge key digest.
+0569 Bridge at %s:%d (%s)
+0570 no key listed
+0571 No arguments on DirServer line.
+0572 Invalid orport '%s' on DirServer line.
+0573 Bad v3 identity digest '%s' on DirServer line
+0574 Unrecognized flag '%s' on DirServer line
+0575 Too few arguments to DirServer line.
+0576 Error parsing DirServer address '%s'
+0577 Missing port in DirServer address '%s'
+0578 Key digest for DirServer is wrong length %d.
+0579 Unable to decode DirServer key digest.
+0580 Trusted %d dirserver at %s:%d (%s)
+0581 Config file "%s" is not a file? Failing.
+0582 Couldn't get configuration string
+0583 tor_snprintf failed inexplicably
+0584 Renaming old configuration file to "%s"
+0585 Couldn't rename configuration file "%s" to "%s": %s
+0586 Unknown unit '%s'.
+0587 Interval '%s' is too long
+0588 Function not implemented
+0589 We were compiled with headers from version %s of Libevent, but we're using a Libevent library that says it's version %s.
+0590 This will almost certainly make Tor crash.
+0591 If Tor crashes, this might be why.
+0592 I think these versions are binary-compatible.
+0593 It's a little hard to tell, but you seem to have Libevent 1.4.0-beta header files, whereas you have linked against Libevent %s.  This will probably make Tor crash.
+0594 It's a little hard to tell, but you seem to have Libevent header file from 1.3e or earlier, whereas you have linked against Libevent %s.  This will probably make Tor crash.
+0595 Initialized libevent version %s using method %s. Good.
+0596 Initialized old libevent (version 1.0b or earlier). You have a *VERY* old version of libevent.  It is likely to be buggy; please build Tor with a more recent version.
+0597 Libevent version %s often crashes when running a Tor server with %s. Please use the latest version of libevent (1.3b or later)
+0598 There are serious bugs in using %s with libevent %s. Please use the latest version of libevent.
+0599 There are minor bugs in using %s with libevent %s. You may want to use the latest version of libevent.
+0600 libevent %s can be very slow with %s. When running a server, please use the latest version of libevent.
+0601 Obsolete file %s hasn't been modified since %s. Removing it.
+0602 StrictExitNodes set, but no ExitNodes listed.
+0603 StrictEntryNodes set, but no EntryNodes listed.
+0604 You have requested constrained socket buffers while also serving directory entries via DirPort. It is strongly suggested that you disable serving directory requests when system TCP buffer resources are scarce.
+0605 V3AuthVotingInterval does not divide evenly into 24 hours.
+0606 TestingAuthDirTimeToLearnReachability is insanely high.
+0607 TestingEstimatedDescriptorPropagationTime is insanely high.
+0609 ORPort must be defined if ORListenAddress is defined.
+0610 DirPort must be defined if DirListenAddress is defined.
+0611 DNSPort must be defined if DNSListenAddress is defined.
+0612 ControlPort must be defined if ControlListenAddress is defined.
+0613 TransPort must be defined if TransListenAddress is defined.
+0614 NatdPort must be defined if NatdListenAddress is defined.
+0621 TransPort and TransListenAddress are disabled in this build.
+0622 IPs or countries are not yet supported in EntryNodes.
+0623 Authoritative directory servers must set ContactInfo
+0624 V1 auth dir servers must set RecommendedVersions.
+0625 Versioning auth dir servers must set Recommended*Versions.
+0626 AuthoritativeDir is set, but none of (Bridge/HS/V1/V2/V3)AuthoritativeDir is set.
+0627 Running as authoritative directory, but no DirPort set.
+0628 Running as authoritative directory, but no ORPort set.
+0629 Running as authoritative directory, but ClientOnly also set.
+0630 HSAuthorityRecordStats is set but we're not running as a hidden service authority.
+0631 Servers must be able to freely connect to the rest of the Internet, so they must not set Reachable*Addresses or FascistFirewall.
+0632 Servers must be able to freely connect to the rest of the Internet, so they must not set UseBridges.
+0633 KeepalivePeriod option must be positive.
+0634 RelayBandwidthBurst must be at least equal to RelayBandwidthRate.
+0635 BandwidthBurst must be at least equal to BandwidthRate.
+0636 HttpProxy failed to parse or resolve. Please fix.
+0637 HttpProxyAuthenticator is too long (>= 512 chars).
+0638 HttpsProxy failed to parse or resolve. Please fix.
+0639 HttpsProxyAuthenticator is too long (>= 512 chars).
+0640 Bad HashedControlPassword: wrong length or bad encoding
+0641 Bad HashedControlSessionPassword: wrong length or bad encoding
+0642 Cannot enable UseEntryGuards with NumEntryGuards set to 0
+0643 Directory authority line did not parse. See logs for details.
+0644 If you set UseBridges, you must specify at least one bridge.
+0645 If you set UseBridges, you must set TunnelDirConns.
+0646 Bridge line did not parse. See logs for details.
+0647 ConstrainedSockSize is invalid.  Must be a value between %d and %d in 1024 byte increments.
+0648 V3AuthVoteDelay plus V3AuthDistDelay must be less than half V3AuthVotingInterval
+0649 V3AuthVoteDelay is way too low.
+0650 V3AuthDistDelay is way too low.
+0651 V3AuthNIntervalsValid must be at least 2.
+0652 V3AuthVotingInterval is insanely low.
+0653 V3AuthVotingInterval is insanely high.
+0654 Failed to configure rendezvous options. See logs for details.
+0655 Failed to configure client authorization for hidden services. See logs for details.
+0657 TestingTorNetwork may only be configured in combination with a non-default set of DirServers.
+0658 TestingV3AuthInitialVotingInterval may only be changed in testing Tor networks!
+0659 TestingV3AuthInitialVotingInterval is insanely low.
+0660 TestingV3AuthInitialVotingInterval does not divide evenly into 30 minutes.
+0661 TestingV3AuthInitialVoteDelay may only be changed in testing Tor networks!
+0662 TestingV3AuthInitialVoteDelay is way too low.
+0663 TestingV3AuthInitialDistDelay may only be changed in testing Tor networks!
+0664 TestingV3AuthInitialDistDelay is way too low.
+0665 TestingV3AuthInitialVoteDelay plus TestingV3AuthInitialDistDelay must be less than half TestingV3AuthInitialVotingInterval
+0666 TestingAuthDirTimeToLearnReachability may only be changed in testing Tor networks!
+0667 TestingAuthDirTimeToLearnReachability must be non-negative.
+0668 TestingEstimatedDescriptorPropagationTime may only be changed in testing Tor networks!
+0669 TestingEstimatedDescriptorPropagationTime must be non-negative.
+0670 Int keyword '%s %s' is malformed or out of bounds.
+0671 internal error
+0672 Interval '%s %s' is malformed or out of bounds.
+0673 Value '%s %s' is malformed or out of bounds.
+0674 Boolean '%s %s' expects 0 or 1.
+0675 Invalid time '%s' for keyword '%s'
+0676 Invalid exit list '%s' for option '%s'
+0677 Port '%s' out of range in %s
+0678 You may not provide a value for virtual option '%s'
+0679 Nickname '%s' is wrong length or contains illegal characters.
+0680 Unrecognized value in PublishServerDescriptor
+0681 BandwidthRate is set to %d bytes/second. For servers, it must be at least %d.
+0682 MaxAdvertisedBandwidth is set to %d bytes/second. For servers, it must be at least %d.
+0683 RelayBandwidthRate is set to %d bytes/second. For servers, it must be at least %d.
+0684 Invalid nickname '%s' in %s line
+0685 Failed to parse/validate config: %s
+;
+0686 unknown connection type %d
+0687 unknown connection state %d (type %d)
+0688 Error removing read event for %d
+0689 Error removing write event for %d
+0690 Freeing linked %s connection [%s] with %d bytes on inbuf, %d on outbuf.
+0691 Could not unlink %s: %s
+0692 closing fd %d.
+0693 called on OR conn with non-zeroed identity_digest
+0694 Called with conn->linked_conn still set.
+0695 (Harmless.) Edge connection (marked at %s:%d) hasn't sent end yet?
+0696 Closing stream (marked at %s:%d) without sending back a socks reply.
+0697 Closing stream (marked at %s:%d) without having set end_reason.
+0698 Closing stream (marked at %s:%d) without having replied to DNS request.
+0699 Attempt to close already-closed connection.
+0700 fd %d, type %s, state %s, %d bytes on outbuf.
+0701 Duplicate call to connection_mark_for_close at %s:%d (first at %s:%d)
+0702 Giving up on marked_for_close conn that's been flushing for 15s (fd %d, type %s, state %s).
+0703 Error parsing/resolving ListenAddress %s
+0704 Unix domain sockets not supported, yet we tried to create one.
+0705 Failing because we have %d connections already. Please raise your ulimit -n.%s
+0706 Opening %s on %s:%d
+0707 Socket creation failed.
+0708 Could not bind to %s:%u: %s%s
+0709 Could not listen on %s:%u: %s
+0710 Opening %s on %s
+0711 Could not unlink %s: %s
+0712 Socket creation failed: %s.
+0713 Bind to %s failed: %s.
+0714 Could not listen on %s: %s
+0715 Got unexpected address family %d.
+0716 connection_add for listener failed. Giving up.
+0717 %s listening on port %u.
+0718 Length of address not as expected: %d vs %d
+0719 Address for new connection has address/port equal to zero.
+0720 A listener connection returned a socket with a mismatched family. %s for addr_family %d gave us a socket with address family %d. Dropping.
+0721 accept() failed: %s. Closing listener.
+0722 Connection accepted on socket %d (child of fd %d).
+0723 accept() returned a strange address; trying getsockname().
+0724 getsockname() for new connection failed: %s
+0725 Something's wrong with this conn. Closing it.
+0726 Denying socks connection from untrusted address %s.
+0727 Denying dir connection from address %s.
+0728 Rejecting request for banned address %s:%u .
+0729 Connection request for %s:%u .
+0730 Resolve request for %s [:%u] .
+0731 Resolve request for %s .
+0732 Error creating network socket: %s
+0733 Outbound bind address '%s' didn't parse. Ignoring.
+0734 Error binding network socket: %s
+0735 Connecting to %s:%u.
+0736 connect() to %s:%u failed: %s
+0737 Connection to %s:%u %s (sock %d).
+0738 in progress
+0739 established
+0740 Closing no-longer-configured %s on %s:%d
+0741 Already have %s on %s:%d
+0742 Value out of range. num_read=%lu, num_written=%lu, connection type=%s, state=%s
+0743 waking up conn (fd %d) for read
+0744 waking up conn (fd %d) for write
+0745 %d: starting, inbuf_datalen %ld (%d pending in tls object). at_most %ld.
+0746 TLS connection closed %son read. Closing. (Nickname %s, address %s)
+0747 cleanly 
+0748 not set
+0749 tls error [%s]. breaking (nickname %s, address %s).
+0750 apparently, reading pending bytes can fail.
+0751 After TLS read of %d: %ld read, %ld written
+0752 Moved %d bytes on an internal link!
+0753 called recursively from inside conn->in_flushed_some()
+0754 getsockopt() syscall failed?! Please report to tor-ops.
+0755 in-progress connect failed. Removing. (%s)
+0756 tls error. breaking.
+0757 tls error [%s]. breaking connection.
+0758 TLS connection closed on flush
+0759 tls closed. breaking connection.
+0760 wanted write.
+0761 wanted read.
+0762 After TLS write of %d: %ld read, %ld written
+0763 write_to_buf failed. Closing circuit (fd %d).
+0764 write_to_buf failed. Closing connection (fd %d).
+0765 unhandled error on write for conn (type %d, fd %d); removing
+0766 getsockname() to check for address change failed: %s
+0767 Our IP address has changed.  Rotating keys...
+0768 setsockopt() to constrain send buffer to %d bytes failed: %s
+0769 setsockopt() to constrain recv buffer to %d bytes failed: %s
+0770 got unexpected conn type %d.
+0771 In buffers for %d connections: %I64u used/%I64u allocated
+0772   For %d %s connections: %I64u used/%I64u allocated
+;
+0773 stream (marked at %s:%d) sending two socks replies?
+0774 conn (fd %d) reached eof. Closing.
+0775 data from edge while in '%s' state. Leaving it on buffer.
+0776 Got unexpected state %d. Closing.
+0777 CircID %d: At an edge. Marking connection for close.
+0778 (Harmless.) Calling connection_edge_end (reason %d) on an already ended stream?
+0779 called on conn that's already marked for close at %s:%d.
+0780 Sending end on conn (fd %d).
+0781 No circ to send end on conn (fd %d).
+0782 Called in unexpected state %d.
+0783 Exit connection to %s:%u (%s) established.
+0784 Tried for %d seconds to get a connection to %s:%d. Giving up. (%s)
+0785 Conn is waiting (address %s), but lost its circ.
+0786 Rend stream is %d seconds late. Giving up on address '%s.onion'.
+0787 We tried for %d seconds to connect to '%s' using exit '%s'. Retrying on a new circuit.
+0788 Closing onehop stream to '%s/%s' because the OR conn just failed.
+0789 Giving up on enclave exit '%s' for destination %s.
+0790 Clearing TrackHostExists mappings for exit '%s'
+0791 Addressmap: rewriting %s to %s
+0792 Loop detected: we've rewritten %s 16 times! Using it as-is.
+0793 Rewrote reverse lookup %s -> %s
+0794 Temporary addressmap ('%s' to '%s') not performed, since it's already mapped to '%s'
+0795 Addressmap: (re)mapped '%s' to '%s'
+0796 Address %s now has %d resolve failures.
+0797 %d addrs available
+0798 Ran out of virtual addresses!
+0799 Called with unsupported address type (%d)
+0800 Internal confusion: I thought that '%s' was mapped to by '%s', but '%s' really maps to '%s'. This is a harmless bug.
+0801 Registering map from %s to %s
+0802 Map from %s to %s okay.
+0803 Application request to port %d: this port is commonly used for unencrypted protocols. Please make sure you don't send anything you would mind the rest of the Internet reading!%s
+0804  Closing.
+0805 Port %d listed in RejectPlaintextPorts. Closing.
+0806 Client asked for %s:%d
+0807 Automapping %s to %s
+0808 Missing mapping for virtual address '%s'. Refusing.
+0809 Invalid hostname %s; rejecting
+0810 Malformed exit address '%s.exit'. Refusing.
+0811 Unrecognized server in exit address '%s.exit'. Refusing.
+0812 Destination '%s' seems to be an invalid hostname. Failing.
+0813 Address to be resolved is too large. Failing.
+0814 Application asked to connect to port 0. Refusing.
+0815 Redirecting address %s to exit at enclave router %s
+0816 Resolve requests to hidden services not allowed. Failing.
+0817 Attachstream to a circuit is not supported for .onion addresses currently. Failing.
+0818 Got a hidden service request for ID '%s'
+0819 Invalid service name '%s'
+0820 Using previously configured client authorization for hidden service request.
+0821 Unknown descriptor %s. Fetching.
+0822 Descriptor is here and fresh enough. Great.
+0823 Stale descriptor %s. Refetching.
+0824 getsockopt() failed: %s
+0825 getsockname() to determine transocks destination failed: %s
+0826 getsockname() gave an unexpected address family (%d)
+0827 Called connection_ap_get_original_destination, but no transparent proxy method was configured.
+0828 connection_ap_handshake_process_socks() entered.
+0829 socks handshake not all here yet.
+0830 reply is already set for us. Using it.
+0831 Fetching socks handshake failed. Closing.
+0832 connection_ap_process_transparent() entered.
+0833 Fetching original destination failed. Closing.
+0834 connection_ap_process_natd() entered.
+0835 Natd handshake failed (DEST too long). Closing
+0836 Natd handshake was ill-formed; closing. The client said: %s
+0837 Natd handshake failed; port %s is ill-formed or out of range.
+0838 No unused stream IDs. Failing.
+0839 Sending relay cell to begin stream %d.
+0840 Address/port sent, ap socket %d, n_circ_id %d
+0841 Rejecting ill-formed reverse lookup of %s
+0842 Couldn't generate reverse lookup hostname of %s
+0843 Address sent for resolve, ap socket %d, n_circ_id %d
+0844 Making internal %s tunnel to %s:%d ...
+0845 direct
+0846 anonymized
+0847 ... application connection created and linked.
+0848 (Harmless.) duplicate calls to connection_ap_handshake_socks_reply.
+0849 Relay begin cell at non-server. Closing.
+0850 Relay begin cell has no \0. Closing.
+0851 Unable to parse addr:port in relay begin cell. Closing.
+0852 Missing port in relay begin cell. Closing.
+0853 Attempt to open a stream on first hop of circuit. Closing.
+0854 Got an unexpected command %d
+0855 Creating new exit connection.
+0856 begin is for rendezvous. configuring stream.
+0857 Didn't find rendezvous service (port %d)
+0858 Finished assigning addr/port
+0859 about to start the dns_resolve().
+0860 about to call connection_exit_connect().
+0861 %s:%d failed exit policy. Closing.
+0862 about to try connecting
+0863 newly connected conn had data waiting!
+0864 Opening local connection for anonymized directory exit
+;
+0865 Didn't find connection '%s' on identity map when trying to remove it.
+0866 OR connection reached EOF. Closing.
+0867 Your https proxy sent back an oversized response. Closing.
+0868 https proxy response not all here yet. Waiting.
+0869 Unparseable headers from proxy (connecting to '%s'). Closing.
+0870 [no reason given]
+0871 HTTPS connect to '%s' successful! (200 %s) Starting TLS.
+0872 The https proxy sent back an unexpected status code %d (%s). Closing.
+0873 finished sending CONNECT to proxy.
+0874 Called connection_or_finished_flushing() in unexpected state %d.
+0875 OR connect() to router at %s:%u finished.
+0876 Encoding https authenticator failed
+0877 Marking OR conn to %s:%d as too old for new circuits (fd %d, %d secs old).
+0878 Marking OR conn to %s:%d as too old for new circuits: (fd %d, %d secs old). It is not canonical, and we have another connection to that OR that is.
+0879 Marking OR conn to %s:%d as too old for new circuits: (fd %d, %d secs old). We have a better canonical one (fd %d; %d secs old).
+0880 Marking OR conn to %s:%d as too old for new circuits: (fd %d, %d secs old). We have a better one (fd %d; %d secs old).
+0881 Client asked me to connect to myself. Refusing.
+0882 tor_tls_new failed. Closing.
+0883 starting TLS handshake on fd %d
+0884 Tried connecting to router at %s:%d, but it didn't send a cert! Closing.
+0885 Got incoming connection with no certificate. That's ok.
+0886 Tried connecting to router at %s:%d: It has a cert but it's invalid. Closing.
+0887 Incoming connection gave us an invalid cert chain; ignoring.
+0888 The certificate seems to be valid on %s connection with %s:%d
+0889 Connected to router %s at %s:%d without knowing its key. Hoping for the best.
+0890 Tried connecting to router at %s:%d, but identity key was not as expected: wanted %s but got %s.
+0891 tls handshake with %s done. verifying.
+0892 New entry guard was reachable, but closing this connection so we can retry the earlier entry guards.
+0893 %d: starting, inbuf_datalen %d (%d pending in tls object).
+0894 Sending destroy (circID %d).
+;
+0895 Unable to format string for controller.
+0896 Unable to format event for controller.
+0897 Controller gave us config lines we can't parse.
+0898 Controller gave us config lines that didn't validate: %s
+0899 Controller gave us config file that didn't validate: %s
+0900 Got authentication cookie with wrong length (%d)
+0901 Got mismatched authentication cookie
+0902 Couldn't decode HashedControlPassword: invalid base16
+0903 Bad password or authentication cookie on controller.
+0904 Authenticated control connection (%d)
+0905 Unable to allocate address for '%s' in MapAddress msg
+0906 Skipping MapAddress '%s': wrong number of items.
+0907 getinfo '%s': %s
+0908 Asked for stream in unknown state %d
+0909 Controller used obsolete addr-mappings/ GETINFO key; use address-mappings/ instead.
+0910 %s is deprecated; it no longer gives useful information
+0911 Skipping unknown option %s
+0912 Controller asked us to resolve an address, but isn't listening for ADDRMAP events. It probably won't see the answer.
+0913 Control connection reached EOF. Closing.
+0914 Unrecognized status code %d
+0915 Unrecognized status type %d
+0916 Unrecognized status severity %d
+0917 Format string too long.
+0918 Error writing authentication cookie to %s.
+0919 Bootstrapped %d%%: %s.
+0920 Problem bootstrapping. Stuck at %d%%: %s. (%s; %s; count %d; recommendation %s)
+0921 Undefined
+0922 Starting
+0923 Connecting to directory server
+0924 Finishing handshake
+0925 Finishing handshake with directory server
+0926 Establishing an encrypted directory connection
+0927 Asking for networkstatus consensus
+0928 Loading networkstatus consensus
+0929 Loading authority key certs
+0930 Asking for relay descriptors
+0931 Loading relay descriptors
+0932 Connecting to the Tor network
+0933 Finishing handshake with first hop
+0934 Establishing a Tor circuit
+0935 Connected to the OR network.
+;
+0936 Read eof. CPU worker died unexpectedly.
+0937 ...and it left a circuit queued; abandoning circ.
+0938 decoding onionskin failed. (Old key or bad software.) Closing.
+0939 processed onion for a circ that's gone. Dropping.
+0940 onionskin_answer failed. Closing.
+0941 onionskin_answer succeeded. Yay.
+0942 CPU worker exiting because Tor process closed connection (either rotated keys or died).
+0943 CPU worker exiting because of error on connection to Tor process. (Error on %d was %s)
+0944 read tag failed. Exiting.
+0945 read question failed. Exiting.
+0946 onion_skin_server_handshake failed.
+0947 onion_skin_server_handshake succeeded.
+0948 writing response buf failed. Exiting.
+0949 finished writing response.
+0950 Couldn't construct socketpair for cpuworker: %s
+0951 just spawned a cpu worker.
+0952 connection_add for cpuworker failed. Giving up.
+0953 Cpuworker spawn failed. Will try again later.
+0954 assign_to_cpuworker failed. Ignoring.
+0955 closing wedged cpuworker. Can somebody find the bug?
+0956 No idle cpuworkers. Queuing.
+0957 circ->p_conn gone. Failing circ.
+;
+0958 Called with unknown purpose %d
+0959 hidden-service descriptor fetch
+0960 server descriptor upload
+0961 hidden-service descriptor upload
+0962 server vote upload
+0963 consensus signature upload
+0964 network-status fetch
+0965 server descriptor fetch
+0966 extra-info fetch
+0967 consensus network-status fetch
+0968 authority cert fetch
+0969 status vote fetch
+0970 consensus signature fetch
+0971 hidden-service v2 descriptor fetch
+0972 hidden-service v2 descriptor upload
+0973 (unknown)
+0974 Uploading an extrainfo too (length %d)
+0975 Publishing server descriptor to directory authorities of type '%s', but no authorities of that type listed!
+0976 Unexpected purpose %d
+0977 Ignoring directory request, since no bridge nodes are available yet.
+0978 Deferring serverdesc fetch: all authorities are in use.
+0979 No router found for %s; falling back to dirserver list.
+0980 While fetching directory info, no running dirservers known. Will try again later. (purpose %d)
+0981 Not sending anonymized request to directory '%s'; we don't have its router descriptor.
+0982 Giving up on directory server at '%s'; retrying
+0983 Giving up downloading detached signatures from '%s'
+0984 Giving up downloading votes from '%s'
+0985 anonymized %d, use_begindir %d. Initiating %s
+0986 Making tunnel to dirserver failed.
+0987 Unable to add connection for link to dirserver.
+0988 Encoding HTTP authenticator failed
+0989 Downloading consensus from %s using %s
+0990 Squid does not like URLs longer than 4095 bytes, and this one is %d bytes long: %s%s
+0991 Skipping over 'http[s]://hostname' string
+0992 Ignoring unrecognized or internal IP %s
+0993 Failed to parse header %s
+0994 Unrecognized content encoding: %s. Trying to deal.
+0995 'fetch' response too large (server '%s:%d'). Closing.
+0996 'fetch' response not all here, but we're at eof. Closing.
+0997 Unparseable headers (server '%s:%d'). Closing.
+0998 Received response from directory server '%s:%d': %d %s
+0999 Changed time stamp delta using directory delta to: %ld.
+1000 Received directory with skewed time (server '%s:%d'): It seems that our clock is %s by %s, or that theirs is %s. Tor requires an accurate clock to work: please check your time, timezone, and date settings.
+1001 Time on received directory is within tolerance; we are %ld seconds skewed. (That's okay.)
+1002 Received http status code %d (%s) from server '%s:%d'. I'll try again soon.
+1004 HTTP body from server '%s:%d' was labeled %s, but it seems to be %s.%s
+1005 as deflated
+1006 as gzipped
+1007 as uncompressed
+1008 with an unknown Content-Encoding
+1009 deflated
+1010 gzipped
+1011 confusing binary junk
+1012 uncompressed
+1013   Trying both.
+1014 Unable to decompress HTTP body (server '%s:%d').
+1015 Received networkstatus objects (size %d) from server '%s:%d'
+1016 Received http status code %d (%s) from server '%s:%d' while fetching "/tor/status/%s". I'll try again soon.
+1017 We received a networkstatus but we didn't ask for it by fp, nor did we ask for all.
+1018 Received http status code %d (%s) from server '%s:%d' while fetching consensus directory.
+1019 Received consensus directory (size %d) from server '%s:%d'
+1020 Unable to load consensus directory downloaded from server '%s:%d'. I'll try again soon.
+1021 Successfully loaded consensus.
+1022 Received http status code %d (%s) from server '%s:%d' while fetching "/tor/keys/%s".
+1023 Received authority certificates (size %d) from server '%s:%d'
+1024 Unable to parse fetched certificates
+1025 Successfully loaded certificates from fetch.
+1026 Got votes (size %d) from server %s:%d
+1027 Received http status code %d (%s) from server '%s:%d' while fetching "/tor/status-vote/next/%s.z".
+1028 Error adding retrieved vote: %s
+1029 Added vote(s) successfully [msg: %s]
+1030 Got detached signatures (size %d) from server %s:%d
+1031 Received http status code %d (%s) from server '%s:%d' while fetching "/tor/status-vote/consensus-signatures.z".
+1032 Problem adding detached signatures from %s:%d: %s
+1033 Received %s (size %d) from server '%s:%d'
+1034 Received http status code %d (%s) from server '%s:%d' while fetching "/tor/server/%s". I'll try again soon.
+1035 Received %d/%d %s requested from %s:%d
+1036 Authority '%s' declined our descriptor (not new)
+1037 eof (status 200) after uploading server descriptor: finished.
+1038 http status 400 (%s) response from dirserver '%s:%d'. Please correct.
+1039 HTTP status %d (%s) reason unexpected while uploading descriptor to server '%s:%d').
+1040 Uploaded a vote to dirserver %s:%d
+1041 http status 400 (%s) response after uploading vote to dirserver '%s:%d'. Please correct.
+1042 http status %d (%s) reason unexpected while uploading vote to server '%s:%d').
+1043 Uploaded signature(s) to dirserver %s:%d
+1044 http status 400 (%s) response after uploading signatures to dirserver '%s:%d'. Please correct.
+1045 http status %d (%s) reason unexpected while uploading signatures to server '%s:%d').
+1046 Received rendezvous descriptor (size %d, status %d (%s))
+1047 Failed to parse rendezvous descriptor.
+1048 http status 400 (%s). Dirserver didn't like our rendezvous query?
+1049 http status %d (%s) response unexpected while fetching hidden service descriptor (server '%s:%d').
+1050 Fetching v2 rendezvous descriptor failed. Retrying at another directory.
+1051 Successfully fetched v2 rendezvous descriptor, but we already have a v0 descriptor.
+1052 Successfully fetched v2 rendezvous descriptor.
+1053 Fetching v2 rendezvous descriptor failed: http status 400 (%s). Dirserver didn't like our v2 rendezvous query? Retrying at another directory.
+1054 Fetching v2 rendezvous descriptor failed: HTTP status %d (%s) response unexpected while fetching v2 hidden service descriptor (server '%s:%d'). Retrying at another directory.
+1055 Uploaded rendezvous descriptor (status %d (%s))
+1056 Uploading rendezvous descriptor: finished with status 200 (%s)
+1057 http status 400 (%s) response from dirserver '%s:%d'. Malformed rendezvous descriptor?
+1059 http status %d (%s) response unexpected (server '%s:%d').
+1060 conn reached eof, not reading. [state=%d] Closing.
+1061 Too much data received from directory connection: denial of service attempt, or you need to upgrade?
+1062 Got data, not eof. Leaving on inbuf.
+1063 status line too long.
+1064 Failed to decode requested authority digest %s.
+1065 Received GET command.
+1066 rewritten url as '%s'.
+1067 Client asked for the mirrored directory, but we don't have a good one yet. Sending 503 Dir not available.
+1068 Client asked for the mirrored directory, but we've been writing too many bytes lately. Sending 503 Dir busy.
+1069 Dumping %sdirectory to client.
+1070 compressed 
+1071 Client asked for running-routers, but we've been writing too many bytes lately. Sending 503 Dir busy.
+1072 Client asked for network status lists, but we've been writing too many bytes lately. Sending 503 Dir busy.
+1073 Client asked for server descriptors, but we've been writing too many bytes lately. Sending 503 Dir busy.
+1074 Got a v2 rendezvous descriptor request for ID '%s'
+1075 Handling rendezvous descriptor get
+1076 Received POST command.
+1077 Rejected v2 rend descriptor (length %d) from %s since we're not currently a hidden service directory.
+1078 Rejected v2 rend descriptor (length %d) from %s.
+1079 Handled v2 rendezvous descriptor post: accepted
+1080 Problematic router descriptor or extra-info from %s ("%s").
+1081 Rejected router descriptor or extra-info from %s ("%s").
+1082 Handling rendezvous descriptor post.
+1083 Rejected rend descriptor (length %d) from %s.
+1084 Unable to store signatures posted by %s: %s
+1085 Invalid input from address '%s'. Closing.
+1086 command not all here yet.
+1087 Got headers %s with unknown command. Closing.
+1088 client finished sending command.
+1089 Finished writing server response. Closing.
+1090 called in unexpected state %d.
+1091 Dir connection to router %s:%u established.
+1092 Called with bad fingerprint in list: %s
+1093 Malformed fingerprint in list: %s
+1094 Skipping digest pair %s with non-standard length.
+1095 Skipping digest pair %s with missing dash.
+1096 Skipping non-decodable digest pair %s
+1097 Skipping digest %s with non-standard length.
+1098 Skipping non-decodable digest %s
+1099 %s failed %d time(s); I'll try again immediately.
+1100 %s failed %d time(s); I'll try again in %d seconds.
+1101 %s failed %d time(s); Giving up for a while.
+1102 %s: Network error
+1103 %s: Error downloading network status documents
+1104 %s: Error downloading router descriptors
+1105 %s: Error downloading certificates
+1106 %s: Sending request ...
+1107 Consensus URL: %s
+1108 %s: Downloading %s
+1109 %s: EOF
+1110 %s: Connection established
+;
+1111 Couldn't decode fingerprint "%s"
+1112 Tried to add a mapping for reserved nickname %s
+1113 Error computing fingerprint
+1114 Reloading approved fingerprints from "%s"...
+1115 Cannot open fingerprint file '%s'. Failing.
+1116 Cannot open fingerprint file '%s'. That's ok.
+1117 Error reading from fingerprint file
+1118 Nickname '%s' too long in fingerprint file. Skipping.
+1119 Invalid nickname '%s' in fingerprint file. Skipping.
+1120 Invalid fingerprint (nickname '%s', fingerprint %s). Skipping.
+1121 Authorizing nickname '%s' would break many clients; skipping.
+1122 Authorizing nickname '%s' is not allowed; skipping.
+1123 Duplicate nickname '%s'.
+1124 %d fingerprints, %d digests known.
+1125 Good fingerprint for '%s'
+1126 Mismatched fingerprint for '%s'. ContactInfo '%s', platform '%s'.)
+1127 Marking '%s' as bad directory because of address '%s'
+1128 Marking '%s' as bad exit because of address '%s'
+1129 Rejecting '%s' because of address '%s'
+1130 Not marking '%s' valid because of address '%s'
+1131 Router '%s' published non-IP address '%s'. Refusing.
+1132 Router '%s' published internal IP address '%s'. Refusing.
+1133 Publication time for nickname '%s' is too far (%d minutes) in the future; possible clock skew. Not adding (%s)
+1134 Publication time for router with nickname '%s' is too far (%d minutes) in the past. Not adding (%s)
+1135 Router with nickname '%s' has invalid address '%s'. Not adding (%s).
+1136 Somebody attempted to publish a router descriptor '%s' (source: %s) with size %d. Either this is an attack, or the MAX_DESCRIPTOR_UPLOAD_SIZE (%d) constant is too low.
+1137 Not replacing descriptor from '%s' (source: %s); differences are cosmetic.
+1138 Did not add descriptor from '%s' (source: %s): %s.
+1139 (no message)
+1140 Added descriptor from '%s' (source: %s): %s.
+1141 Somebody attempted to publish an extrainfo with size %d. Either this is an attack, or the MAX_EXTRAINFO_UPLOAD_SIZE (%d) constant is too low.
+1142 Router '%s' is now rejected: %s
+1143 Router '%s' is now %s.
+1144 named
+1145 unnamed
+1146 valid
+1147 invalid
+1148 a good directory
+1149 a bad directory
+1150 a good exit
+1151 a bad exit
+1152 write identity_pkey to string failed!
+1153 couldn't compute digest
+1154 tried to exceed string length.
+1155 Ignoring old directory; not caching.
+1156 Ignoring future directory; not caching.
+1157 Caching directory.
+1158 Error compressing cached directory
+1159 Error compressing directory
+1160 Removing too-old untrusted networkstatus in %s
+1161 Couldn't generate %s?
+1162 The %s is still clean; reusing.
+1163 Error creating directory.
+1164 New directory (size %d) has been built.
+1165 New directory (size %d):
+%s
+1166 Cutoffs: For Stable, %lu sec uptime, %lu sec MTBF. For Fast: %lu bytes/sec. For Guard: WFU %.03lf%%, time-known %lu sec, and bandwidth %lu or %lu bytes/sec. %s enough stability data.
+1167 We have
+1168 We don't have
+1169 Not enough space in buffer.
+1170 Unable to print router version.
+1171 Cannot get any descriptor for %s (wanted descriptor %s).
+1172 descriptor digest in routerlist does not match the one in routerstatus: %s vs %s (router %s)
+1173 Couldn't resolve my hostname
+1174 Error computing signing key digest
+1175 Error computing identity key digest
+1176 Choosing valid-after time in vote as %s: consensus_set=%d, last_interval=%d
+1177 Writing public key to string failed.
+1178 Unable to print router status.
+1179 Unable to write signature line.
+1180 Unable to end signature line.
+1181 Unable to get fingerprint for signing key
+1182 Unable to hash network status
+1183 Unable to sign router status.
+1184 Generated a networkstatus we couldn't parse.
+1185 Generated a networkstatus %s we couldn't parse: <<%s>>
+1186 Client requested 'all' network status objects; we have none.
+1187 Don't know about any network status with fingerprint '%s'
+1188 Found router %s to be reachable at %s:%d. Yay.
+1189 Testing reachability of %s at %s:%u.
+;
+1190 Unable to sign networkstatus vote.
+1191 Can't compute a consensus from no votes.
+1192 Generating consensus using method %d.
+1193 The other authorities will use consensus method %d, which I don't support.  Maybe I should upgrade!
+1194 Conflict on naming for router: %s vs %s
+1195 The voters disagreed on the exit policy summary  for router %s with descriptor %s.  This really shouldn't have happened.
+1196 Not one of the voters that made us select descriptor %s for router %s had an exit policy summary
+1197 Wow, not one of the voters had an exit policy summary for %s.  Wow.
+1198 Not enough space in buffer for weight line.
+1199 Not enough space in buffer for exitpolicy line.
+1200 Couldn't sign consensus networkstatus.
+1201 Generated a networkstatus consensus we couldn't parse.
+1202 Looking at signature from %s
+1203 We do not know any voter with ID %s
+1204 We already have a good signature from %s
+1205 Adding signature from %s
+1206 Not adding signature from %s
+1207 Choosing expected valid-after time as %s: consensus_set=%d, interval=%d
+1208 Scheduling voting.  Known authority IDs are %s. Mine is %s.
+1209 Time to vote.
+1210 Time to fetch any votes that we're missing.
+1211 Time to compute a consensus.
+1212 Time to fetch any signatures that we're missing.
+1213 Time to publish the consensus and discard old votes
+1214 Didn't find key/certificate to generate v3 vote
+1215 Can't generate v3 vote with expired certificate
+1216 Couldn't store my own vote! (I told myself, '%s'.)
+1217 Vote posted.
+1218 We're missing votes from %d authorities. Asking every other authority for a copy.
+1219 Couldn't parse vote: length was %d
+1220 Got a vote from an authority (nickname %s, address %s) with authority key ID %s. This key ID is not recognized. Known v3 key IDs are: %s
+1221 We added a cert, but still couldn't find it.
+1222 Rejecting vote from %s with valid-after time of %s; we were expecting %s
+1223 Discarding a vote we already have.
+1224 Replacing an older pending vote from this directory.
+1225 We don't have enough votes to generate a consensus: %d of %d
+1226 Can't generate consensus without a certificate.
+1227 Couldn't generate a consensus at all!
+1228 Couldn't parse consensus we generated!
+1229 Couldn't extract signatures.
+1230 Could not add queued signature to new consensus: %s
+1231 Added %d pending signatures while building consensus.
+1232 Consensus computed; uploading signature(s)
+1233 Signature(s) posted.
+1234 Have %d signatures for adding to consensus.
+1235 Added %d signatures to consensus.
+1236 Got a signature from %s. Adding it to the pending consensus.
+1237 Got a signature from %s. Queuing it for the next consensus.
+1238 Not enough info to publish pending %s consensus
+1239 Error publishing %s consensus
+1240 Published %s consensus.
+1241 Couldn't parse detached signatures.
+1242 No signatures to add
+1243 Signatures added
+1244 Signatures ignored
+1245 Unrecognized error while adding detached signatures.
+;
+1246 This version of AdvOR requires AdvOR.dll version 0.1.0.7 or higher.
+1247 Error loading %s. Some features, like "Intercept" will be unavailable.
+1248  
+
+		Advanced Onion Router v%s
+
+	Click "► Connect" to connect to the OR network.
+	These are the proxy settings you can use:
+		Address: 127.0.0.1
+		Port: %d
+		127.0.0.1:%d
+	Use "Intercept" to be sure that your proxy settings are always used.
+
+	Download locations:
+		http://www.te-home.net/?do=work&id=advor
+		http://sourceforge.net/projects/advtor/files/
+		http://www.softpedia.com/get/Internet/Servers/WEB-Servers/Advanced-TOR.shtml
+	For feature requests and bug reports use one of the following forums:
+		http://www.te-home.net/?do=forum&id=advor
+		http://sourceforge.net/p/advtor/discussion/
+	(no registration required: anonymous posting is allowed)
+
+1249 Added to AddressMap: %s
+1250 Removed from AddressMap: %s
+1251 No exit node is currently in use. Use "Track exit for %s" option to associate a temporary exit node for %s .
+1252 The entry "%s" was not found in AddressMap
+;
+1253 eventdns: Resolve requested.
+1254 Expiring a dns resolve %s that's still pending. Forgot to cull it? DNS resolve didn't tell us about the timeout?
+1255 Forgetting old cached resolve (address %s, expires %lu)
+1256 Closing pending connections on timed-out DNS resolve!
+1257 The expired resolve we purged didn't match any in the cache. Tried to purge %s (%p); instead got %s (%p).
+1258 Rejecting invalid destination address %s
+1259 Bad .in-addr.arpa address "%s"; sending error.
+1260 Attempt to connect to a .in-addr.arpa address "%s"; sending error.
+1261 Connection (fd %d) waiting for pending DNS resolve of %s
+1262 Connection (fd %d) found cached answer for %s
+1263 Connection (fd %d) found cached error for %s
+1264 Found a 'DONE' dns resolve still in the cache.
+1265 Launching %s.
+1266 Address %s is not pending. Dropping.
+1267 First connection (fd %d) no longer waiting for resolve of %s
+1268 Connection (fd %d) no longer waiting for resolve of %s
+1269 Address %s is not pending but has pending connections!
+1270 Address %s is pending but has no pending connections!
+1271 Failing all connections waiting on DNS resolve of %s
+1272 The cancelled resolve we purged didn't match any in the cache. Tried to purge %s (%p); instead got %s (%p).
+1273 Resolved unasked address %s; caching anyway.
+1274 Resolved %s which was already resolved; ignoring
+1275 The pending resolve we found wasn't removable from the cache. Tried to purge %s (%p); instead got %s (%p).
+1276 Couldn't convert outbound bind address to sockaddr. Ignoring.
+1277 Unable to stat resolver configuration in '%s': %s
+1278 No change to '%s'
+1279 Parsing resolver configuration in '%s'
+1280 Unable to parse '%s', or no nameservers in '%s' (%d)
+1281 Unable to find any nameservers in '%s'.
+1282 Could not config nameservers.
+1283 Unable to find any platform nameservers in your Windows configuration.
+1284 eventdns said that %s resolves to ISP-hijacked address %s; treating as a failure.
+1285 eventdns said that %s resolves to %s
+1286 eventdns returned only non-IPv4 answers for %s.
+1287 eventdns returned no addresses or error for %s!
+1288 (Harmless.) Nameservers not configured, but resolve launched. Configuring.
+1289 Launching eventdns request for %s
+1290 Launching eventdns reverse request for %s
+1291 Somehow a malformed in-addr.arpa address reached here.
+1292 eventdns rejected address %s: error %d.
+1293 Your DNS provider has given "%s" as an answer for %d different invalid addresses. Apparently they are hijacking DNS failures. I'll try to correct for this by treating future occurrences of "%s" as 'not found'.
+1294 Your DNS provider tried to redirect "%s" to a junk address. It has done this with %d test addresses so far. I'm going to stop being an exit node for now, since our DNS seems so broken.
+1295 Your DNS provider gave an answer for "%s", which is not supposed to exist. Apparently they are hijacking DNS failures. Trying to correct for this. We've noticed %d possibly %s so far.
+1296 bad address
+1297 bad addresses
+1298 Testing whether our DNS server is hijacking nonexistent domains with request for bogus hostname "%s"
+1299 Launching checks to see whether our nameservers like to hijack *everything*.
+1300 eventdns rejected test address %s
+1301 Launching checks to see whether our nameservers like to hijack DNS failures.
+1302 Couldn't add timer for checking for dns hijacking
+1303 Bad rep type %d on dns cache hash table
+;
+1304 Got a new DNS request!
+1305 Couldn't get requesting address.
+1306 Requesting address wasn't recognized.
+1307 Rejecting DNS request from disallowed IP.
+1308 No questions in DNS request; sending back nil reply.
+1309 Got a DNS request with more than one question; I only handle one question at a time for now. Skipping the extras.
+1310 None of the questions we got were ones we're willing to support. Sending NOTIMPL.
+1311 Couldn't register dummy connection for DNS request
+1312 Passing request for %s to rewrite_and_attach.
+1313 Passed request for %s to rewrite_and_attach.
+1314 Couldn't register dummy connection for RESOLVE request
+1315 Got an IPv6 answer; that's not implemented.
+;
+1316 Error from libevent when adding timer event for %s
+1317 Error from libevent when adding timer for request %lx
+1318 Error from libevent when setting one-second timeout event
+1319 Nameserver %s has failed: %s
+1320 All nameservers have failed
+1321 Nameserver %s is back up
+1322 Removing timeout for request %lx
+1323 Got a SERVERFAILED from nameserver %s; will allow the request to time out.
+1324 Address mismatch on received DNS packet. Address was %s
+1325 Error %s (%d) while reading request.
+1326 Error %s (%d) while writing response to port; dropping
+1327 Error from libevent when adding event for DNS server.
+1328 Error from libevent when adding event for %s
+1329 Request %lx timed out
+1330 Setting timeout for request %lx
+1331 Sending probe to %s
+1332 Duplicate nameserver.
+1333 Addrlen %d too long.
+1334 Couldn't bind to outgoing address.
+1335 Couldn't open socket to nameserver.
+1336 Couldn't add event for nameserver.
+1337 Successfully added %s as nameserver
+1338 Unable to add nameserver %s: error %d
+1339 Could not add nameserver %s to list, error: %d; status: %d
+1340 Trying to add nameserver <%s>
+1341 Nameserver missing closing ]
+1342 [Nameserver] does not fit in buffer.
+1343 Nameserver does not fit in buffer.
+1344 Nameserver port <%s> out of range
+1345 inet_pton(%s) failed
+1346 Resolve requested for %s
+1347 Resolve requested for %s (reverse)
+1348 Search: trying raw query %s
+1349 Search: now trying %s (%d)
+1350 Setting ndots to %d
+1351 Setting timeout to %d
+1352 Setting maximum allowed timeouts to %d
+1353 Setting maximum inflight requests to %d
+1354 Setting retries to %d
+1355 Setting randomize_case to %d
+1356 Parsing resolv.conf file %s
+1357 Could not open iphlpapi.dll
+1358 Could not get address of function.
+1359 iphlpapi fn() failed.
+1360 No nameservers added.
+1361 Found nameservers in %s/%s
+1362 Didn't find nameservers in %s/%s
+1363 Didn't find any nameservers.
+1364 Couldn't open nt key, %d
+1365 Couldn't open interfaces key, %d
+1366 Couldn't open registry key, %d
+;
+1367 Too few arguments to AccountingStart
+1368 Unrecognized accounting unit '%s': only 'month', 'week', and 'day' are supported.
+1369 Weekly accounting must begin on a day between 1 (Monday) and 7 (Sunday)
+1370 Monthly accounting must begin on a day between 1 and 28
+1371 Accounting unit '%s' requires %d %s.
+1372 argument
+1373 arguments
+1374 Accounting start time not parseable: bad hour.
+1375 Accounting start time not parseable: not in HH:MM format
+1376 Accounting start time not parseable: bad minute
+1377 Starting new accounting interval.
+1378 Continuing accounting interval.
+1379 Mismatched accounting interval; starting a fresh one.
+1380 Couldn't record bandwidth usage to disk.
+1381 Error initializing keys
+1382 Configured hibernation. This interval begins at %s and ends at %s. We have no prior estimate for bandwidth, so we will start out awake and hibernate when we exhaust our quota.
+1383 Configured hibernation. This interval began at %s; the scheduled %s %s; %s to exhaust our quota for this interval around %s; the next interval begins at %s (all times local)
+1384 wake-up time is
+1385 wake-up time was
+1386 we expect
+1387 we expected
+1388 Reading bandwdith accounting data from state file
+1389 Successfully read bandwidth accounting info from state written at %s for interval starting at %s. We have been active for %lu seconds in this interval. At the start of the interval, we expected to use about %lu KB per second. (%I64u bytes read so far, %I64u bytes written so far)
+1390 %s; exiting now.
+1391 Sigint received a second time
+1392 Sigint received while hibernating
+1393 Closing listener type %d
+1394 Interrupt: will shut down in %d seconds. Interrupt again to exit now.
+1395 Hibernation period ended. Resuming normal activity.
+1396 Going dormant. Blowing away remaining connections.
+1397 Closing conn type %d
+1398 Accounting period ended. Commencing hibernation until %s GMT
+1399 Accounting period ended. This period, we will hibernate until %s GMT
+1400 Clean shutdown finished. Exiting.
+1401 Bandwidth soft limit reached; commencing hibernation.
+1402 Commencing hibernation. We will wake up at %s local time.
+;
+1403 new conn type %s, socket %d, address %s, n_conns %d.
+1404 removing socket %d (type %s), n_conns now %d
+1405 Error from libevent setting read event state for %d to unwatched: %s
+1406 Error from libevent setting read event state for %d to watched: %s
+1407 Error from libevent setting write event state for %d to unwatched: %s
+1408 Error from libevent setting write event state for %d to watched: %s
+1409 socket %d wants to read.
+1410 Unhandled error on read for %s connection (fd %d); removing
+1411 socket %d wants to write.
+1412 unhandled error on write for %s connection (fd %d); removing
+1413 Cleaning up connection (fd %d).
+1414 Conn (addr %s, fd %d, type %s, state %d) marked, but wants to flush %d bytes. (Marked at %s:%d)
+1415 Flushed last %d bytes from a linked conn; %d left; flushlen %d; wants-to-flush==%d
+1416 Holding conn (fd %d) open for more flushing.
+1417 We stalled too much while trying to write %d bytes to address %s. If this happens a lot, either something is wrong with your network connection, or something is wrong with theirs. (fd %d, type %s, state %d, marked at %s:%d).
+1418 Is your network connection down? Failing connection to '%s:%d'.
+1419 I learned some more directory information, but not enough to build a circuit: %s
+1420 Expiring wedged directory conn (fd %d, purpose %d)
+1421 Trying to extract information from wedged server desc download.
+1422 Expiring non-used OR connection to fd %d (%s:%d) [Too old].
+1423 Expiring non-open OR connection to fd %d (%s:%d).
+1424 Expiring non-used OR connection to fd %d (%s:%d) [Hibernating or exiting].
+1425 Expiring non-used OR connection to fd %d (%s:%d) [idle %d].
+1426 Expiring stuck OR connection to fd %d (%s:%d). (%d bytes to flush; %d seconds since last write)
+1427 Sending keepalive to (%s:%d)
+1428 Honoring delayed NEWNYM request
+1429 Rotating onion key.
+1430 Couldn't rebuild router descriptor
+1431 Rotating tls context.
+1432 Error reinitializing TLS context
+1433 Couldn't store mtbf data.
+1434 Your server (%s:%d) has not managed to confirm that its ORPort is reachable. Please check your firewalls, ports, address, /etc/hosts file, etc.
+1435 Your server (%s:%d) has not managed to confirm that its DirPort is reachable. Please check your firewalls, ports, address, /etc/hosts file, etc.
+1436 Too many libevent errors in one second; dying
+1437 Received reload signal (hup). Reloading config and resetting internal state.
+1438 Reading config failed--see warnings above. For usage, try -h.
+1439 Not reloading config file: the controller told us not to.
+1440 Error reloading fingerprints. Continuing with old list.
+1441 Unrecognized signal number %d.
+1442 Catching signal TERM, exiting cleanly.
+1443 Interrupt: exiting cleanly.
+1444 Caught sigpipe. Ignoring.
+1445 Caught USR2, going to loglevel debug. Send HUP to change back.
+1446 Restart failed (config error?). Exiting.
+1447 Rate limiting NEWNYM request: delaying by %d second(s)
+1448 In rephist: %I64u used by %d Tors.
+1449 Dumping stats:
+1450 Conn %d (socket %d) type %d (%s), state %d (%s), created %d secs ago
+1451 Conn %d is to %s:%d.
+1452 Conn %d: %d bytes waiting on inbuf (len %d, last read %d secs ago)
+1453 Conn %d: %d bytes waiting on outbuf (len %d, last written %d secs ago)
+1454 Conn %d: %d/%d bytes used on openssl read buffer; %d/%d bytes used on write buffer.
+1455 Cells processed: %I64u padding
+                 %I64u create
+                 %I64u created\n
+                 %I64u relay
+                        (%I64u relayed)
+                        (%I64u delivered)
+                 %I64u destroy
+1456 Average packaged cell fullness: %2.3f%%
+1457 Average delivered cell fullness: %2.3f%%
+1458 Average bandwidth: %I64u/%d = %d bytes/sec reading
+1459 Average bandwidth: %I64u/%d = %d bytes/sec writing
+1460 --------------- Dumping memory information:
+1461 Clients don't have long-term identity keys. Exiting.
+1462 Error initializing keys; can't display fingerprint
+1463 Error: missing identity key.
+1464 Error initializing network; exiting.
+1465 Unable to initialize OpenSSL. Exiting.
+1466 Selected random OS version: %s
+1467 Changed time stamp delta to: %ld.
+1468 Error initializing dns subsystem; will try again later.
+1469 Error initializing keys; exiting
+1470 libevent call failed: %s [%d]
+1471 libevent call returned EINPROGRESS? Please report.
+1472 libevent call interrupted.
+;
+1473 Skipping cached-status file with unexpected name "%s"
+1474 Couldn't load networkstatus from "%s"
+1475 Couldn't load consensus networkstatus from "%s"
+1476 Loaded fallback consensus networkstatus from "%s"
+1477 Got a bad signature on a networkstatus vote
+1478 Consensus includes unrecognized authority '%s' at %s:%d (contact %s; identity %s)
+1479 Looks like we need to download a new certificate from authority '%s' at %s:%d (contact %s; identity %s)
+1480 Consensus does not include configured authority '%s' at %s:%d (identity %s)
+1481 %d unknown, %d missing key, %d good, %d bad, %d no signature, %d required
+1482 Couldn't write cached network status to "%s"
+1483 Couldn't parse network status.
+1484 Network status was signed, but not by an authoritative directory we recognize.
+1485 Network status from %s was published %s in the future (%s GMT). Check your time and date settings! Not caching.
+1486 Our clock is %s behind the time published in the consensus network status document (%s GMT). Tor needs an accurate clock to work correctly. Please check your time and date settings!
+1487 We received a network status with a fingerprint (%s) that we never requested. (We asked for: %s.) Dropping.
+1488 We do not recognize authority (%s) but we are willing to cache it.
+1489 Not replacing network-status from %s (published %s); we already have it.
+1490 Not replacing network-status from %s (published %s); we have a newer one (published %s) for this authority.
+1491 Got a consensus we already have
+1492 Got a consensus at least as old as the one we have
+1493 Setting networkstatus %s %s (published %s)
+1494 cached from
+1495 downloaded from
+1496 generated for
+1497 Removing too-old networkstatus in %s
+1498 The name %s is listed as Unnamed; it is not the canonical name of any server we know.
+1499 There are multiple matches for the nickname "%s", but none is listed as named by the directory authorities. Choosing one arbitrarily.
+1500 When looking up a status, you specified a server "%s" by name, but the directory authorities do not have any key registered for this nickname -- so it could be used by any server, not just the one you meant. To make sure you get the same server in the future, refer to it by key, as "$%s".
+1501 Launching networkstatus consensus download.
+1502 %s the most recent until %s and will expire at %s; fetching the next one at %s.
+1503 Live consensus will be
+1504 Live consensus was
+1505 No live consensus; we should fetch one immediately.
+1506 delaying dir fetches (no running bridges known)
+1507 Unable to parse networkstatus consensus
+1508 Loaded an obsolete consensus. Discarding.
+1509 Not enough certificates to check networkstatus consensus
+1510 Not enough good signatures on networkstatus consensus
+1511 The directory authorities say my version is ok.
+1512 The directory authorities don't recommend any versions.
+1513 This version of Tor (%s) is newer than any recommended version%s, according to the directory authorities. Recommended versions are: %s
+1514 Please upgrade! This version of Tor (%s) is %s, according to the directory authorities. Recommended versions are: %s
+1515 obsolete
+1516 not recommended
+1517 Unrecognized purpose '%s' when listing router statuses.
+;
+1518 Couldn't open advapi32.dll. Are you trying to use NT services on Windows 98? That doesn't work.
+1519 Couldn't find %s in advapi32.dll! We probably got the name wrong.
+1520 Got stop/shutdown request; shutting down cleanly.
+1521 Unsupported command (--list-fingerint, --hash-password, or --verify-config) in NT service.
+1522 Illegal command number %d: internal error.
+;
+1523 Your computer is too slow to handle this many circuit creation requests! Please consider using the MaxAdvertisedBandwidth config option or choosing a more restricted exit policy.
+1524 Circuit create request is too old; canceling due to overload.
+1525 circ (p_circ_id %d) not in list, probably at cpuworker.
+1526 Couldn't decrypt onionskin: client may be using old onion key
+1527 Unexpected onionskin length after decryption: %ld
+1528 crypto_dh_get_public failed.
+1529 crypto_dh_compute_secret failed.
+1530 Digest DOES NOT MATCH on onion handshake. Bug or attack.
+1531 Digest DOES NOT MATCH on fast handshake. Bug or attack.
+;
+1532 Adding new entry '%s'
+1533 Malformed policy '%s'.
+1534 Error parsing ReachableAddresses entry; ignoring.
+1535 Unexpected result: %d
+1536 Unable to parse internally generated policy %s
+1537 Removing exit policy %s (%d). It is made redundant by %s (%d).
+1538 Removing exit policy %s. It is already covered by %s.
+1539 Still had %d address policies cached at shutdown.
+;
+1540 End cell arrived with length 0. Should be at least 1.
+1541 Reason for ending (%d) not recognized.
+1542 Reason for ending (%d) not recognized; sending generic socks error.
+1543 Didn't recognize errno %d (%s); telling the client that we are ending a stream for 'misc' reason.
+1544 Unrecognized or_conn reason code %d
+1545 Didn't recognize errno %d (%s).
+1546 Unrecognized reason code %d
+1547 MALFORMED
+1548 misc error
+1549 resolve failed
+1550 connection refused
+1551 exit policy failed
+1552 destroyed
+1553 closed normally
+1554 gave up (timeout)
+1555 server is hibernating
+1556 internal error at server
+1557 server out of resources
+1558 connection reset
+1559 Tor protocol error
+1560 not a directory
+1561 unknown
+;
+1562 Error during relay encryption
+1563 relay crypt failed. Dropping connection.
+1564 Sending away from origin.
+1565 Sending to origin.
+1566 connection_edge_process_relay_cell (away from origin) failed.
+1567 connection_edge_process_relay_cell (at origin) failed.
+1568 Dropping unrecognized inbound cell on origin circuit.
+1569 Error relaying cell across rendezvous; closing circuits
+1570 Didn't recognize cell, but circ stops here! Closing circ.
+1571 Passing on unrecognized cell.
+1572 Relay cell before first created cell? Closing.
+1573 Incoming cell at client not recognized. Closing.
+1574 outgoing relay cell has n_conn==NULL. Dropping.
+1575 crypting a layer of the relay cell.
+1576 incoming relay cell at origin circuit. Dropping.
+1577 found conn for stream %d.
+1578 delivering %d cell %s.
+1579 forward
+1580 backward
+1581 Sending a RELAY_EARLY cell; %d remaining.
+1582 Uh-oh. We're sending a RELAY_COMMAND_EXTEND cell, but we have run out of RELAY_EARLY cells on that circuit. Commands sent before: %s
+1583 circuit_package_relay_cell failed. Closing.
+1584 called on conn that's already marked for close at %s:%d.
+1585 no circ. Closing conn.
+1586 Address '%s' refused due to '%s'. Considering retrying.
+1587 Address '%s' resolved to 0.0.0.0. Closing,
+1588 Address '%s' resolved to internal. Closing,
+1589 Exitrouter '%s' seems to be more restrictive than its exit policy. Not using this router as exit for now.
+1590 Have tried resolving or connecting to address '%s' at %d different places. Giving up.
+1591 Giving up on retrying; conn can't be handled.
+1592 Edge got end (%s) before we're connected. Marking for close.
+1593 Got 'connected' while not in state connect_wait. Dropping.
+1594 'connected' received after %d seconds.
+1595 ...but it claims the IP address was %s. Closing.
+1596 considering
+1597 it is! %d
+1598 Got a 'resolved' cell while not in state resolve_wait. Dropping.
+1599 Dropping malformed 'resolved' cell
+1600 Got a resolve with answer %s. Rejecting.
+1601 Got an unexpected relay command %d, in state %d (%s). Dropping.
+1602 Now seen %d relay cells here.
+1603 Relay cell length field too long. Closing circuit.
+1604 Relay begin request unsupported at AP. Dropping.
+1605 Relay begin request to Hidden Service from intermediary node. Dropping.
+1606 Begin cell for known stream. Dropping.
+1607 (relay data) circ deliver_window below 0. Killing.
+1608 (relay data) conn deliver_window below 0. Killing.
+1609 circ deliver_window now %d.
+1610 data cell dropped, unknown stream (streamid %d).
+1611 end cell (%s) dropped, unknown stream.
+1612 %d: end cell (%s) for stream %d. Removing stream.
+1613 open stream hasn't sent socks answer yet? Closing.
+1614 'extend' cell received for non-zero stream. Dropping.
+1615 'extended' unsupported at non-origin. Dropping.
+1616 Got an extended cell! Yay.
+1617 circuit_finish_handshake failed.
+1618 circuit_send_next_onion_skin() failed.
+1619 'truncate' unsupported at origin. Dropping.
+1620 Processed 'truncate', replying.
+1621 'truncated' unsupported at non-origin. Dropping.
+1622 'connected' unsupported while open. Closing circ.
+1623 'connected' received, no conn attached anymore. Ignoring.
+1624 circ-level sendme at origin, packagewindow %d.
+1625 circ-level sendme at non-origin, packagewindow %d.
+1626 stream-level sendme, packagewindow now %d.
+1627 resolve request unsupported at AP; dropping.
+1628 resolve request for known stream; dropping.
+1629 resolve request on circ with purpose %d; dropping
+1630 'resolved' unsupported while open. Closing circ.
+1631 'resolved' received, no conn attached anymore. Ignoring.
+1632 Received unknown relay command %d. Perhaps the other side is using a newer version of Tor? Dropping.
+1633 called on conn that's already marked for close at %s:%d.
+1634 conn has no circuit! Closing.
+1635 called with package_window %d. Skipping.
+1636 (%d) Packaging %d bytes (%d waiting).
+1637 conn->package_window reached 0.
+1638 conn->package_window is now %d
+1639 No circuit associated with conn. Skipping.
+1640 Outbuf %d, Queuing stream sendme.
+1641 connection_edge_send_command failed. Skipping.
+1642 resuming read
+1643 considering circ->package_window %d
+1644 yes, not-at-origin. stopped.
+1645 considering layer_hint->package_window %d
+1646 yes, at-origin. stopped.
+1647 Queuing circuit sendme.
+1648 relay_send_command_from_edge failed. Circuit's closed.
+1649 %d cells allocated on %d circuits. %d cells leaked.
+1650 Made a circuit inactive.
+1651 Made a circuit active.
+1652 Primed a buffer.
+;
+1653 introcirc is open
+1654 Sending an ESTABLISH_RENDEZVOUS cell
+1655 Internal error: Couldn't produce random cookie.
+1656 Couldn't send ESTABLISH_RENDEZVOUS cell
+1657 Query '%s' didn't have valid rend desc in cache. Failing.
+1658 Could not find intro key for %s at %s; we have a v2 rend desc with %d intro points. Trying a different intro point...
+1659 Internal error: could not find intro key; we only have a v2 rend desc with %d intro points.
+1660 Internal error: couldn't hash public key.
+1661 Internal error: couldn't allocate DH.
+1662 Internal error: couldn't generate g^x.
+1663 Internal error: couldn't extract g^x.
+1664 Internal error: hybrid pk encrypt failed.
+1665 Sending an INTRODUCE1 cell
+1666 Couldn't send INTRODUCE1 cell
+1667 rendcirc is open
+1668 Received REND_INTRODUCE_ACK on unexpected circuit %d.
+1669 Received ack. Telling rend circ...
+1670 ...Found no rend circ. Dropping on the floor.
+1671 No introduction points left for %s. Closing.
+1672 Got nack for %s from %s. Re-extending circ %d, this time to %s.
+1673 Got nack for %s from %s. Building a new introduction circuit, this time to %s.
+1674 Building introduction circuit failed.
+1675 Could not pick one of the responsible hidden service directories, because we requested them all recently without success.
+1676 Could not base64-encode descriptor cookie.
+1677 Sending fetch request for v2 descriptor for service '%s' with descriptor ID '%s', auth type %d, and descriptor cookie '%s' to hidden service directory '%s' on port %d.
+1678 Fetching rendezvous descriptor for service %s
+1679 Would fetch a new renddesc here (for %s), but one is already in progress.
+1680 We received an onion address for a v2 rendezvous service descriptor, but are not fetching service descriptors.
+1681 We would fetch a v2 rendezvous descriptor, but we already have a fresh copy of that descriptor here. Not fetching.
+1682 Fetching v2 rendezvous descriptor for service %s
+1683 Internal error: Computing v2 rendezvous descriptor ID did not succeed.
+1684 Malformed service ID %s.
+1685 Unknown service %s. Re-fetching descriptor.
+1686 No more intro points remain for %s. Re-fetching descriptor.
+1687 %d options left for %s.
+1688 Got a rendezvous ack when we weren't expecting one. Closing circ.
+1689 Got rendezvous ack. This circuit is now ready for rendezvous.
+1690 Got rendezvous2 cell from hidden service, but not expecting it. Closing.
+1691 Incorrect length (%d) on RENDEZVOUS2 cell.
+1692 Got RENDEZVOUS2 cell from hidden service.
+1693 Couldn't complete DH handshake.
+1694 Incorrect digest of key material.
+1695 Rend desc is usable. Launching circuits.
+1696 Rendezvous attempt failed. Closing.
+1697 Closing stream for '%s.onion': hidden service is unavailable (try again later).
+1698 Unknown router with nickname '%s'; trying another.
+1699 Configuration line does not consist of "onion-address authorization-cookie [service-name]": '%s'
+1700 Onion address has wrong format: '%s'
+1701 Authorization cookie has wrong length: '%s'
+1702 Decoding authorization cookie failed: '%s'
+1703 Authorization cookie has unknown authorization type encoded.
+1704 Duplicate authorization for the same hidden service.
+;
+1705 Could not compute v2 descriptor ID: Illegal service ID: %s
+1706 {Could not compute v2 descriptor ID: Replica number out of range: %d
+1707 Could not compute v2 descriptor ID: Illegal characters in service ID: %s
+1708 Could not write onion key.
+1709 Could not write intro key.
+1710 Not enough space for writing introduction point string.
+1711 Not enough space for finalizing introduction point string.
+1712 Unable to generate random session key to encrypt introduction point string.
+1713 Too many clients in introduction point string.
+1714 Could not encrypt introduction point string.
+1715 Could not encrypt session key for client.
+1716 Unable to generate fake client entry.
+1717 Could not encode v2 descriptor: No desc given.
+1718 Encoding of introduction points did not succeed.
+1719 Encrypting of introduction points did not succeed.
+1720 Unrecognized authorization type %d
+1721 Could not encode introduction point string to base64. length=%d
+1722 Could not write public key to string.
+1723 Descriptor ran out of room.
+1724 could not write introduction points.
+1725 could not create digest.
+1726 Couldn't sign desc.
+1727 Could not finish desc.
+1728 Could not parse my own descriptor: %s
+1729 Successfully encoded a v2 descriptor and confirmed that it is parsable.
+1730 Signature is %d bytes too long on service descriptor.
+1731 Bad signature on service descriptor.
+1732 Truncated service descriptor.
+1733 Removing descriptor with ID '%s' from cache
+1734 Descriptor ID contains illegal characters: %s
+1735 Could not answer fetch request for v2 descriptor; either we are no hidden service directory, or we are not responsible for the requested ID.
+1736 Couldn't parse service descriptor.
+1737 Couldn't compute service ID.
+1738 Service descriptor %s is too old.
+1739 Service descriptor %s is too far in the future.
+1740 We already have a v2 descriptor for service %s.
+1741 We already have a newer service descriptor %s with the same ID and version.
+1742 We already have this service descriptor %s.
+1743 Successfully stored rend desc '%s', len %d.
+1744 Cannot store descs: Not acting as hs dir
+1745 Service descriptor with desc ID %s is not in interval that we are responsible for.
+1746 Successfully stored service descriptor with desc ID '%s' and len %d.
+1747 Could not parse any descriptor.
+1748 Parsed %d and added %d descriptor%s.
+1749 Failed to decrypt introduction points. We are probably unable to parse the encoded introduction points.
+1750 Successfully decrypted introduction points.
+1751 Failed to parse introduction points. Either the service has published a corrupt descriptor or you have provided invalid authorization data.
+1752 Descriptor does not contain any introduction points.
+1753 We already have a v0 descriptor for service ID %s.
+1754 Relay cell (rend purpose %d) from wrong hop on origin circ
+1755 Dropping cell (type %d) for wrong circuit type.
+;
+1756 Received an ESTABLISH_INTRO request on circuit %d
+1757 Rejecting ESTABLISH_INTRO on non-OR or non-edge circuit.
+1758 Couldn't decode public key.
+1759 Internal error computing digest.
+1760 Hash of session info was not as expected.
+1761 Incorrect signature on ESTABLISH_INTRO cell; rejecting.
+1762 Internal error: couldn't hash public key.
+1763 Replacing old circuit for service %s
+1764 Couldn't send INTRO_ESTABLISHED cell.
+1765 Established introduction point on circuit %d for service %s
+1766 Rejecting truncated ESTABLISH_INTRO cell.
+1767 Received an INTRODUCE1 request on circuit %d
+1768 Rejecting INTRODUCE1 on non-OR or non-edge circuit %d.
+1769 Impossibly short INTRODUCE1 cell on circuit %d; responding with nack.
+1770 No intro circ found for INTRODUCE1 cell (%s) from circuit %d; responding with nack.
+1771 Sending introduction request for service %s from circ %d to circ %d
+1772 Unable to send INTRODUCE2 cell to Tor client.
+1773 Unable to send INTRODUCE_ACK cell to Tor client.
+1774 Unable to send NAK to Tor client.
+1775 Received an ESTABLISH_RENDEZVOUS request on circuit %d
+1776 Tried to establish rendezvous on non-OR or non-edge circuit.
+1777 Invalid length on ESTABLISH_RENDEZVOUS.
+1778 Duplicate rendezvous cookie in ESTABLISH_RENDEZVOUS.
+1779 Couldn't send RENDEZVOUS_ESTABLISHED cell.
+1780 Established rendezvous point on circuit %d for cookie %s
+1781 Got request for rendezvous from circuit %d to cookie %s.
+1782 Tried to complete rendezvous on non-OR or non-edge circuit %d.
+1783 Rejecting RENDEZVOUS1 cell with bad length (%d) on circuit %d.
+1784 Rejecting RENDEZVOUS1 cell with unrecognized rendezvous cookie %s.
+1785 Unable to send RENDEZVOUS2 cell to client on circuit %d.
+1786 Completing rendezvous: circuit %d joins circuit %d (cookie %s)
+;
+1787 Hidden service with client authorization and version 0 descriptors configured; ignoring.
+1788 Hidden service with client authorization but no clients; ignoring.
+1789 Hidden service with no ports configured; ignoring.
+1790 Configuring service with directory "%s"
+1791 Service maps port %d to %s:%d
+1792 Bad syntax in hidden service port configuration.
+1793 Missing or invalid port %s in hidden service port configuration
+1794 Unparseable address in hidden service port configuration.
+1795 Unparseable or out-of-range port %s in hidden service port configuration.
+1796 %s with no preceding HiddenServiceKey directive
+1797 Got multiple HiddenServiceAuthorizeClient lines for a single service.
+1798 HiddenServiceAuthorizeClient has no value. This should have been prevented when parsing the configuration.
+1799 HiddenServiceAuthorizeClient contains unrecognized auth-type '%s'. Only 'basic' or 'stealth' are recognized.
+1800 HiddenServiceAuthorizeClient contains auth-type '%s', but no client names.
+1801 HiddenServiceAuthorizeClient contains %d duplicate client name(s); removing.
+1802 HiddenServiceAuthorizeClient contains an illegal client name: '%s'. Length must be between 1 and %d characters.
+1803 HiddenServiceAuthorizeClient contains an illegal client name: '%s'. Valid characters are [A-Za-z0-9+-_].
+1804 Adding client name '%s'
+1805 HiddenServiceAuthorizeClient contains %d client authorization entries, but only a maximum of %d entries is allowed for authorization type '%s'.
+1806 HiddenServiceVersion can only be 0 and/or 2.
+1807 Closing intro point %s for service %s.
+1808 Loading hidden-service keys from "%s"
+1809 Directory name too long to store key file: "%s".
+1810 Internal error: couldn't encode service ID.
+1811 Couldn't compute hash of public key.
+1812 Directory name too long to store hostname file: "%s".
+1813 Could not write onion address to hostname file.
+1814 Directory name too long to store client keys file: "%s".
+1815 Previously stored client_keys file could not be parsed.
+1816 Parsed %d previously stored client entries.
+1817 Could not open client_keys file %s
+1818 Could not open hostname file %s
+1819 Could not base64-encode descriptor cookie.
+1820 Error constructing client key
+1821 Error generating client key
+1822 Generated client key seems invalid
+1823 Could not write client entry.
+1824 Could not append client entry to file: %s
+1825 Could not append host entry to file: %s
+1826 Can't check authorization for a service that has no authorized clients configured.
+1827 No authorization found for descriptor cookie '%s'! Dropping cell!
+1828 Client %s authorized for service %s.
+1829 Received INTRODUCE2 cell for service %s on circ %d.
+1830 Got an INTRODUCE2 over a non-introduction circuit %d.
+1831 Got a truncated INTRODUCE2 cell on circ %d.
+1832 Got an INTRODUCE2 cell for an unrecognized service %s.
+1833 Got an INTRODUCE2 cell for the wrong service (%s).
+1834 PK-encrypted portion of INTRODUCE2 cell was truncated.
+1835 Couldn't decrypt INTRODUCE2 cell.
+1836 Wrong auth data size %d, should be %d.
+1837 Unknown authorization type '%d'
+1838 INTRODUCE2 cell is too %s. Discarding.
+1839 old
+1840 new
+1841 Bad length %u for version %d INTRODUCE2 cell.
+1842 Error decoding onion key in version %d INTRODUCE2 cell.
+1843 Couldn't find a nul-padded nickname in INTRODUCE2 cell.
+1844 Bad nickname in INTRODUCE2 cell.
+1845 Couldn't find router %s named in introduce2 cell.
+1846 Bad length %u for INTRODUCE2 cell.
+1847 Possible replay detected! We received an INTRODUCE2 cell with same first part of Diffie-Hellman handshake %d seconds ago. Dropping cell.
+1848 Authorization data in INTRODUCE2 cell are valid.
+1849 The authorization data that are contained in the INTRODUCE2 cell are invalid. Dropping cell.
+1850 INTRODUCE2 cell does not contain authentication data, but we require client authorization. Dropping cell.
+1851 Internal error: couldn't build DH state or generate public key.
+1852 Internal error: couldn't complete DH handshake
+1853 Giving up launching first hop of circuit to rendezvous point %s for service %s.
+1854 Accepted intro; launching circuit to %s (cookie %s) for service %s.
+1855 Attempt to build circuit to %s for rendezvous has failed too many times or expired; giving up.
+1856 Skipping relaunch of circ that failed on its first hop. Initiator will retry.
+1857 Reattempting rendezvous circuit to '%s'
+1858 Couldn't relaunch rendezvous circuit to '%s'.
+1859 Launching circuit to introduction point %s for service %s
+1860 Can't launch circuit to establish introduction at %s.
+1861 The intro circuit we just cannibalized ends at $%s, but we requested an intro circuit to $%s. Updating our service.
+1862 Unrecognized service ID %s on introduction circuit %d.
+1863 We have just finished an introduction circuit, but we already have enough. Redefining purpose to general.
+1864 Established circuit %d as introduction point for service %s
+1865 Internal error; failed to establish intro point.
+1866 Internal error: couldn't sign introduction request.
+1867 Couldn't send introduction request for service %s on circuit %d
+1868 received INTRO_ESTABLISHED cell on non-intro circuit.
+1869 Unknown service on introduction circuit %d.
+1870 Received INTRO_ESTABLISHED cell on circuit %d for service %s
+1871 Done building circuit %d to rendezvous with cookie %s for service %s
+1872 Internal error: unrecognized service ID on introduction circuit.
+1873 Couldn't get DH public key.
+1874 Couldn't send RENDEZVOUS1 cell.
+1875 Could not determine the responsible hidden service directories to post descriptors to.
+1876 Not sending publish request for v2 descriptor to hidden service directory '%s'; we don't have its router descriptor. Queuing for later upload.
+1877 Sending publish request for v2 descriptor for service '%s' with descriptor ID '%s' with validity of %d seconds to hidden service directory '%s' on port %d.
+1878 Internal error: couldn't encode service descriptor; not uploading.
+1879 Sending publish request for hidden service %s
+1880 Successfully uploaded v2 rend descriptors!
+1881 Giving up on %s as intro point for %s.
+1882 The intro point we are giving up on was included in the last published descriptor. Marking current descriptor as dirty.
+1883 Could only establish %d introduction points for %s.
+1884 Picked router %s as an intro point for %s.
+1885 Error launching circuit to node %s for service %s.
+1886 Service configured in "%s":
+1887   Intro point %d at %s: no circuit
+1888   Intro point %d at %s: circuit is %s
+1889 beginning to hunt for addr/port
+1890 Couldn't find any service associated with pk %s on rendezvous circuit %d; closing.
+1891 No virtual port mapping exists for port %d on service %s
+;
+1892 Router %s is now Running; it had been down since %s.
+1893   (Paradoxically, it was already Running too.)
+1894 Router %s is still Running; it has been Running since %s
+1895 Router %s is now Running; it was previously untracked
+1896 Router %s is now non-Running: it had previously been Running since %s.  Its total weighted uptime is %lu/%lu.
+1897 Router %s is now non-Running; it was previously untracked.
+1898 Router %s is still non-Running; it has been non-Running since %s.
+1899 Discounting all old stability info by a factor of %lf
+1900 --------------- Dumping history information:
+1901 OR %s [%s]: %ld/%ld good connections; uptime %ld/%ld sec (%.2f%%); wmtbf %lu:%02lu:%02lu
+1902 Relay '%s' is listed as up in rephist, but it's not in our routerlist. Correcting.
+1903 Unrecognized format in mtbf history file. Skipping.
+1904 Couldn't parse downrate time in mtbf history file.
+1905 Couldn't parse stored time in mtbf history file.
+1906 Couldn't parse started-tracking time in mtbf history file.
+1907 No stored time recorded.
+1908 Couldn't scan line %s
+1909 Couldn't scan +MTBF line %s
+1910 Couldn't scan +WFU line %s
+1911 Couldn't hex string %s
+1912 Couldn't parse time %s
+1913 Truncated MTBF file.
+1914 Could not parse '%s' into a number.'
+1915 Expiring predicted port %d
+1916 Unknown pk operation %d
+1917 PK operations: %lu directory objects signed, %lu directory objects verified, %lu routerdescs signed, %lu routerdescs verified, %lu onionskins encrypted, %lu onionskins decrypted, %lu client-side TLS handshakes, %lu server-side TLS handshakes, %lu rendezvous client operations, %lu rendezvous middle operations, %lu rendezvous server operations.
+;
+1918 Error constructing rotated onion key
+1919 Error generating onion key
+1920 Couldn't write generated onion key to "%s".
+1921 Rotating onion key
+1922 Couldn't rotate onion key.
+1923 Error constructing key
+1924 Can't read key from "%s"
+1925 Another Tor process has locked "%s". Not writing any new keys.
+1926 No key found in "%s"; generating fresh key.
+1927 Generated key seems invalid
+1928 Generated key seems valid
+1929 Couldn't write generated key to "%s".
+1930 No key found in "%s"
+1931 Error loading private key.
+1932 No version 3 directory key found in %s
+1933 Signing key found, but no certificate found in %s
+1934 Unable to parse certificate in %s
+1935 Stored signing key does not match signing key in certificate
+1936 Your v3 authority certificate has expired. Generate a new one NOW.
+1937 Your v3 authority certificate expires in %d hours; Generate a new one NOW.
+1938 Your v3 authority certificate expires in %d days; Generate a new one soon.
+1939 Error creating TLS context for Tor client.
+1940 We're configured as a V3 authority, but we were unable to load our v3 authority keys and certificate! Use tor-gencert to generate them. Dying.
+1941 Reading/making identity key "%s"...
+1942 Reading/making onion key "%s"...
+1943 Error initializing TLS context
+1944 . Is Tor already running?
+1945 Error adding own fingerprint to approved set
+1946 Generated a routerinfo we couldn't parse.
+1947 Unable to add own descriptor to directory: %s
+1948 <unknown error>
+1949 Dumping fingerprint to "%s"...
+1950 Error writing fingerprint line
+1951 Error writing fingerprint line to file
+1952 Your Tor server's identity key fingerprint is '%s %s'
+1953 Error loading fingerprints
+1954 We want to be a directory authority, but we couldn't add ourselves to the authority list. Failing.
+1955 Configured authority type does not match authority type in DirServer list. Adjusting. (%d v %d)
+1956 V3 identity key does not match identity declared in DirServer line. Adjusting.
+1957 Adding my own v3 cert
+1958 Unable to parse my own v3 cert! Failing.
+1959 Advertising DirPort as %d
+1960 Not advertising DirPort (Reason: %s)
+1961 Testing reachability of my ORPort
+1962 Testing bandwidth of my ORPort
+1963 Self-testing indicates your ORPort is reachable from the outside. Excellent.%s
+1964  Publishing server descriptor.
+1965 ORPort found reachable, but I have no routerinfo yet. Failing to inform controller of success.
+1966 Self-testing indicates your DirPort is reachable from the outside. Excellent.
+1967 DirPort found reachable, but I have no routerinfo yet. Failing to inform controller of success.
+1968 Performing bandwidth self-test...done.
+1969 No descriptor; skipping upload
+1970 My desc is '%s'
+1971 Could not determine our address locally. Checking if directory headers provide any hints.
+1972 No hints from directory headers either. Will try again later.
+1973 I have no descriptor for the router named "%s" in my declared family; I'll use the nickname as is, but this may confuse clients.
+1974 There is a router named "%s" in my declared family, but that isn't a legal nickname. Skipping it.
+1975 Couldn't generate extra-info descriptor.
+1976 Couldn't generate router descriptor.
+1977 Measured bandwidth has changed; rebuilding descriptor.
+1978 Our IP Address has changed from %s to %s; rebuilding descriptor (source: %s).
+1979 Guessed our IP address as %s (source: %s).
+1980 options->Address didn't resolve into an IP.
+1981 Malformed X-Your-Address-Is header %s. Ignoring.
+1982 Got X-Your-Address-Is: %s.
+1983 A directory server told us our IP address is %s, but he's just reporting his own IP address. Ignoring.
+1984 Tried to sign a router with a private key that didn't match router's public key!
+1985 write onion_pkey to string failed!
+1986 descriptor snprintf #1 ran out of room!
+1987 descriptor snprintf #2 ran out of room!
+1988 descriptor policy_write_item ran out of room!
+1989 descriptor policy_write_item ran out of room (2)!
+1990 not enough room left in descriptor for signature!
+1991 Couldn't sign router descriptor
+1992 Not enough room to finish descriptor.
+1993 We just generated a router descriptor we can't parse. Descriptor was: <<%s>>
+1994 We just generated an extra-info descriptor with statistics that we can't parse. Not adding statistics to this or any future extra-info descriptors.
+;
+1995 Parsed certificate for %s
+1996 unknown authority
+1997 %s for %s that we already have.
+1998 Skipping cached certificate
+1999 Skipping downloaded certificate
+2000 Got a certificate for %s that we already have. Maybe they haven't updated it.  Waiting for a while.
+2001 %s for directory authority %s with signing key %s
+2002 Adding cached certificate
+2003 Adding downloaded certificate
+2004 %s %s for unrecognized directory authority with signing key %s
+2005 Adding
+2006 Not adding
+2007 cached certificate
+2008 downloaded certificate
+2009 Updating address for directory authority %s from %s:%d to %s:%d based on in certificate.
+2010 Error writing certificates to disk.
+2011 We're missing a certificate from authority with signing key %s: launching request.
+2012 No current certificate known for authority %s; launching request.
+2013 Unable to store router descriptor
+2014 Rebuilding %s cache
+2015 No descriptor available for router.
+2016 Error writing router store to disk.
+2017 Error replacing old router store: %s
+2018 We wrote some bytes to a new descriptor file at '%s', but when we went to mmap it, it was empty!
+2019 We just removed every descriptor in '%s'. This is okay if we're just starting up after a long time. Otherwise, it's a bug.
+2020 Unable to mmap new descriptor file at '%s'.
+2021 Reconstructing pointers into cache
+2022 Couldn't read %s; trying to load routers from old location %s.
+2023 No reachable router entries for dirservers. Trying them all again.
+2024 No trusted dirservers are reachable. Trying them all again.
+2025 Nickname '%s' is misformed; skipping
+2026 Nickname list includes '%s' which isn't a known router.
+2027 Total weighted bw = %I64u, exit bw = %I64u, nonexit bw = %I64u, exit weight = %lf (for exit == %d), guard bw = %I64u, nonguard bw = %I64u, guard weight = %lf (for guard == %d)
+2028 Round-off error in computing bandwidth had an effect on  which router we chose. Please tell the developers. %I64u %I64u %I64u
+2029 We couldn't find any live%s%s%s routers; falling back to list of all routers.
+2030 , fast
+2031 , stable
+2032 , guard
+2033 All preferred nodes were down when trying to choose node, and the Strict[...]Nodes option is set. Failing.
+2034 No available nodes when trying to choose node. Failing.
+2035 There are multiple matches for the nickname "%s", but none is listed as named by the directory authorities. Choosing one arbitrarily. If you meant one in particular, you should say %s.
+2036 You specified a server "%s" by name, but this name is not registered, so it could be used by any server, not just the one you meant. To make sure you get the same server in the future, refer to it by key, as "$%s".
+2037 We couldn't read a descriptor that is supposedly mmaped in our cache. Is another process running in our data directory?  Exiting.
+2038 Descriptor at %p begins with unexpected string %s. Is another process running in our data directory?  Exiting.
+2039 In %d live descriptors: %I64u bytes. In %d old descriptors: %I64u bytes.
+2040 Now let's look through old_descriptors!
+2041 Old descriptor for %s (published %s) %s, %s. Last valid until %s; last served at %s.
+2042 in v2 ns
+2043 not in v2 ns
+2044 in v3 consensus
+2045 not in v3 consensus
+2046 Appending entry from routerlist_replace.
+2047 Marking router '%s/%s' %s.
+2048 as up
+2049 as down
+2050 We just marked ourself as down. Are your external addresses reachable?
+2051 Dropping descriptor that we already have for router '%s'
+2052 Received a no-longer-recognized descriptor for router '%s'
+2053 Skipping not-new descriptor for router '%s'
+2054 Replacing entry for router '%s/%s' [%s]
+2055 Forgetting obsolete (too old) routerinfo for router '%s'
+2056 We have %d live routers and %d old router descriptors.
+2057 Error parsing router descriptor; dropping.
+2058 Router's identity key matches mine; dropping.
+2059 Couldn't add router to list: %s Dropping.
+2060 Router descriptor was not new.
+2061 Router descriptor is not referenced by any network-status.
+2062 Skipping router descriptor: not in consensus.
+2063 Valid server updated
+2064 Invalid server updated. (This dirserver is marking your server as unapproved.)
+2065 Router descriptor was really old.
+2066 Rejected: Your clock is set too far in the future, or your timezone is not correct.
+2067 Rejected: Server is expired, or your clock is too far in the past, or your timezone is not correct.
+2068 Rejected: Address is not an IP, or IP is a private address.
+2069 Bug: Error computing fingerprint
+2070 Tor version is far too old to work.
+2071 Rejected: There is already a named server with this nickname and a different fingerprint.
+2072 Fingerprint is marked rejected
+2073 Fingerprint is marked invalid
+2074 Authdir is rejecting routers in this range.
+2075 Authdir rejects unknown routers.
+2076 Added router to list
+2077 %d elements to add
+2078 We received a router descriptor with a fingerprint (%s) that we never requested. (We asked for: %s.) Dropping.
+2079 Marking router %s as never downloadable
+2080 Couldn't find a suitable address when adding ourself as a trusted directory server.
+2081 Unable to lookup address for directory server at '%s'
+2082 There are enough downloadable routerdescs to launch requests.
+2083 There are not many downloadable routerdescs, but we've been waiting long enough (%d seconds). Downloading.
+2084 There are not many downloadable routerdescs, but we haven't tried downloading descriptors recently. Downloading.
+2085 Launching %d request%s for %d router%s, %d at a time
+2086 Called update_router_descriptor_cache_downloads_v2() on a non-dir-mirror?
+2087 We have a router descriptor, but need_to_mirror=1.
+2088 Networkstatus with no corresponding authority!
+2089 Requesting %d descriptors from authority "%s"
+2090 %d router descriptors listed in consensus are currently in old_routers; making them current.
+2091 Failed to re-parse a router.
+2092 Couldn't add re-parsed router: %s
+2093 %d router descriptors downloadable. %d delayed; %d present (%d of those were in old_routers); %d would_reject; %d wouldnt_use; %d in progress.
+2094 Extrainfo download status: %d router with no ei, %d with present ei, %d delaying, %d pending, %d downloadable.
+2095 %d usable, %d present.
+2096 no known bridge descriptors running yet; stalling
+2097 We now have enough directory information to build circuits.
+2098 Our directory information is no longer up-to-date enough to build circuits: %s
+2099 Country code '%s' is not valid, ignoring.
+2100 Country code '%s' is not recognized.
+2101 Adding identity %s to %s
+2102 Adding nickname %s to %s
+2103 Adding country %s to %s
+2104 Adding address %s to %s
+2105 Entry '%s' in %s is misformed.
+2106 We don't have a consensus, so we can't perform v2 rendezvous operations.
+2107 Not adding router '%s' to list of responsible hidden service directories, because we have no way of reaching it.
+2108 We are not acting as hidden service directory, because we have not been configured as such.
+2109 There's no consensus, so I can't tell if I'm a hidden service directory
+2110 We're not listed in the consensus, so we're not being a hidden service directory.
+2111 We're not listed as a hidden service directory in the consensus, so we won't be one.
+;
+2112 Area for %s has %lu allocated; using %lu.
+2113 Couldn't sign digest.
+2114 couldn't base64-encode signature
+2115 Checking whether version '%s' is in '%s'
+2116 I couldn't parse my own version (%s)
+2117 Selected random Tor version: %s
+2118 Unable to compute digest of directory
+2119 Received directory hashes to %s
+2120 No signature found on directory.
+2121 Error tokenizing directory signature
+2122 Unexpected number of tokens in signature
+2123 Expected a single directory signature
+2124 Error tokenizing directory
+2125 Unable to compute digest of running-routers
+2126 Error tokenizing running-routers
+2127 Network-status starts with wrong token
+2128 Missing signature on running-routers
+2129 Unparseable dir-signing-key token
+2130 Dir-signing-key token did not parse as expected
+2131 Dir-signing-key token contained no key
+2132 Error computing dir-signing-key digest
+2133 Listed dir-signing-key is not trusted
+2134 Key on %s did not come from an authority; rejecting
+2135 Bad object type on %s signature
+2136 Error reading %s: invalid signature.
+2137 Error reading %s: signature does not match.
+2138 Read router '%s', purpose '%s'
+2139 %d *distinct* router digests verified
+2140 Error tokenizing router descriptor (annotations).
+2141 No router keyword found.
+2142 Couldn't compute router hash.
+2143 Error tokenizing router descriptor.
+2144 Impossibly short router descriptor.
+2145 Router nickname is invalid
+2146 Router address is not an IP address.
+2147 Invalid OR port %s
+2148 Invalid dir port %s
+2149 bandwidthrate %s unreadable or 0. Failing.
+2150 Invalid bandwidthburst %s
+2151 Invalid bandwidthcapacity %s
+2152 Invalid uptime %s
+2153 Couldn't calculate key digest
+2154 Couldn't decode router fingerprint %s
+2155 Fingerprint '%s' does not match identity digest.
+2156 No exit policy tokens in descriptor.
+2157 Error in exit policy
+2158 Illegal nickname %s in family line
+2159 Invalid extra info digest %s
+2160 or_port unreadable or 0. Failing.
+2161 Error tokenizing extra-info document.
+2162 Impossibly short extra-info document.
+2163 Entry does not start with "extra-info"
+2164 Bad nickname %s on "extra-info"
+2165 Invalid fingerprint %s on "extra-info"
+2166 Invalid published time %s on "extra-info"
+2167 Bad object type or length on extra-info signature
+2168 No signature found on key certificate
+2169 No end-of-signature found on key certificate
+2170 Error tokenizing key certificate
+2171 Key certificate does not begin with a recognized version (3).
+2172 Couldn't decode key certificate fingerprint %s
+2173 Digest of certificate key didn't match declared fingerprint
+2174 Couldn't parse dir-address in certificate
+2175 Certificate didn't end with dir-key-certification.
+2176 We already checked the signature on this certificate; no need to do so again.
+2177 Error tokenizing router status
+2178 Impossibly short router status
+2179 Invalid nickname %s in router status; skipping.
+2180 Error decoding identity digest %s
+2181 Error decoding descriptor digest %s
+2182 Error parsing time '%s %s'
+2183 Error parsing router address in network-status %s
+2184 Flags line had a flag %s not listed in known_flags.
+2185 Invalid Bandwidth %s
+2186 Unknown exit policy summary type %s.
+2187 Network-status has two entries for the same router. Dropping one.
+2188 Unable to compute digest of network-status
+2189 Error tokenizing network-status header.
+2190 Got a non-v2 networkstatus. Version was %s
+2191 Error parsing network-status source address %s
+2192 Directory source without dirport; skipping.
+2193 Couldn't decode networkstatus fingerprint %s
+2194 Couldn't compute signing key digest
+2195 network-status fingerprint did not match dir-signing-key
+2196 Missing client-versions on versioning directory
+2197 Missing server-versions on versioning directory
+2198 Error tokenizing network-status footer.
+2199 Too few items in network-status footer.
+2200 Expected network-status footer to end with a signature.
+2201 Error tokenizing network-status vote header
+2202 Unrecognized vote status %s in network-status
+2203 Got the wrong kind of v3 networkstatus.
+2204 Vote/consensus freshness interval is too short
+2205 Vote/consensus liveness interval is too short
+2206 Vote seconds is too short
+2207 Dist seconds is too short
+2208 known-flags not in order
+2209 Bad element '%s' in params
+2210 Bad int element '%s' in params
+2211 params not in order
+2212 Error decoding identity digest %s in network-status vote.
+2213 Mismatch between identities in certificate and vote
+2214 Error decoding IP address %s in network-status.
+2215 contact element is out of place.
+2216 vote-digest element is out of place.
+2217 Error decoding vote digest %s in network-status consensus.
+2218 Missing dir-source elements in a vote networkstatus.
+2219 Too many dir-source elements in a vote networkstatus.
+2220 Invalid legacy key digest %s on vote.
+2221 Vote networkstatus entries not sorted by identity digest
+2222 Error tokenizing network-status vote footer.
+2223 Bad object type or length on directory-signature
+2224 Error decoding declared identity %s in network-status vote.
+2225 ID on signature on network-status vote does not match any declared directory source.
+2226 Error decoding declared digest %s in network-status vote.
+2227 Digest mismatch between declared and actual on network-status vote.
+2228 We received a networkstatus that contains two votes from the same voter. Ignoring the second vote.
+2229 No signatures on networkstatus vote.
+2230 Error tokenizing detached networkstatus signatures
+2231 Wrong length on consensus-digest in detached networkstatus signatures
+2232 Bad encoding on on consensus-digest in detached networkstatus signatures
+2233 Bad valid-after in detached networkstatus signatures
+2234 Bad fresh-until in detached networkstatus signatures
+2235 Bad valid-until in detached networkstatus signatures
+2236 Policy %s is too long.
+2237 Error reading address policy: %s
+2238 Expected 'accept' or 'reject'.
+2239 Mismatch between field type and address type in exit policy
+2240 Couldn't parse line %s. Dropping
+2241 parse error: %s
+2242 parse error: item contains only annotations
+2243 parse error: Annotations mixed with keywords
+2244 parse error: Unexpected annotations.
+2245 parse error: no annotations allowed.
+2246 Parse error: missing %s element.
+2247 Parse error: too many %s elements.
+2248 Parse error: first item is not %s.
+2249 Parse error: last item is not %s.
+2250 Missing %s [%d] in directory object that should have been validated. Internal error.
+2251 couldn't find start of hashed material "%s"
+2252 first occurrence of "%s" is not at the start of a line
+2253 couldn't find end of hashed material "%s"
+2254 couldn't find EOL
+2255 cutoff version '%s' unparseable.
+2256 Router version '%s' unparseable.
+2257 Descriptor does not start correctly.
+2258 Couldn't compute descriptor hash.
+2259 Descriptor length is %i which exceeds maximum rendezvous descriptor size of %i kilobytes.
+2260 Error tokenizing descriptor.
+2261 Invalid descriptor ID: '%s'
+2262 Descriptor ID contains illegal characters: %s
+2263 Unrecognized descriptor version: %s
+2264 Invalid secret ID part: '%s'
+2265 Secret ID part contains illegal characters: %s
+2266 Invalid publication time: '%s'
+2267 Bad object type: introduction points should be of type MESSAGE
+2268 Parsed descriptor ID does not match computed descriptor ID.
+2269 Size of encrypted introduction points is too small.
+2270 Could not decrypt session key for client.
+2271 Could not decrypt introduction point string.
+2272 Decrypted introduction points don't look like we could parse them.
+2273 Could not decrypt introduction points. Please check your authorization for this service!
+2274 Decrypting introduction points failed!
+2275 Error tokenizing introduction point
+2276 Impossibly short introduction point.
+2277 Identity digest contains illegal characters: %s
+2278 Could not parse introduction point address.
+2279 Introduction point address was not ipv4.
+2280 Introduction point onion port %s is invalid
+2281 Error tokenizing client keys file.
+2282 Impossibly short client key entry.
+2283 Illegal client name: %s. (Length must be between 1 and 19, and valid characters are [A-Za-z0-9+-_].)
+2284 HiddenServiceAuthorizeClient contains a duplicate client name: '%s'. Ignoring.
+2285 Descriptor cookie has illegal length: %s
+2286 Descriptor cookie contains illegal characters: %s
+;
+2287 tor_addr_is_internal() called with a non-IP address.
+2288 Impossibly long IP %s; rejecting
+2289 No closing IPv6 bracket in address pattern; rejecting.
+2290 Malformed IP %s in address pattern; rejecting.
+2291 Bad number of mask bits (%d) on address range; rejecting.
+2292 IPv4-style mask %s is not a prefix address; rejecting.
+2293 Malformed mask on address range %s; rejecting.
+2294 Bad mask bits %i for V4-mapped V6 address; rejecting.
+2295 Unexpected mask in address %s; rejecting
+2296 Wanted one port from address range, but there are two.
+2297 Unexpected ports in address %s; rejecting
+2298 Called with unknown address family %d
+2299 unable to create socket: %s
+2300 connect() failed: %s
+2301 getsockname() to determine interface failed: %s
+2302 Port %s out of range
+2303 Port %s given on %s when not required
+2304 Couldn't look up %s
+2305 Malformed port %s on address range; rejecting.
+2306 Insane port range on address policy; rejecting.
+2307 Bad number of mask bits on address range; rejecting.
+2308 Mask %s on address range isn't a prefix; dropping
+2309 Malformed mask %s on address range; rejecting.
+;
+2310 Could not open "%s" for mmap(): %s
+2311 File "%s" is empty. Ignoring.
+2312 Could not mmap file "%s": %s
+2313 Closing a socket (%d) that wasn't returned by tor_open_socket(), or that was already closed or something.
+2314 Close returned an error: %s
+2315 Our socket count is below zero: %d. Please submit a bug report.
+2316 I thought that %d was already open, but socket() just gave it to me!
+2317 This platform is missing getrlimit(). Proceeding.
+2318 We do not support more than %lu file descriptors on %s. Tried to raise to %lu.
+2319 Could not get maximum number of file descriptors: %s
+2320 We need %lu file descriptors available, and we're limited to %lu. Please change your ulimit -n.
+2321 Raising max file descriptors from %lu to %lu.
+2322 We are limited to %lu file descriptors by OPEN_MAX, and ConnLimit is %lu. Changing ConnLimit; sorry.
+2323 Dropped connection limit to OPEN_MAX (%lu); Apparently, %lu was too high and rlimit lied to us.
+2324 Couldn't set maximum number of file descriptors: %s
+2325 ConnLimit must be at least %d. Failing.
+2326 User specified but switching users is unsupported on your OS.
+2327 User "%s" not found.
+2328 System time is before 1970; failing.
+2329 gettimeofday failed.
+2330 Error %d creating a mutex.
+2331 Error %d locking a mutex.
+2332 Error %d unlocking a mutex.
+2333 Error %d destroying a mutex.
+2334 Error freeing condition: %s
+2335 Failed to acquire mutex: %d
+2336 Error initializing windows network layer: code was %d
+;
+2337 crypto error while %s: %s (in %s:%s)
+2338 crypto error: %s (in %s:%s)
+2339 Using OpenSSL engine %s [%s] for %s
+2340 Using default implementation for %s
+2341 Unable to allocate crypto object
+2342 setting symmetric key
+2343 generating RSA key
+2344 Error parsing private key
+2345 Error reading private key from "%s"
+2346 writing RSA key to string
+2347 reading public key from string
+2348 writing private key
+2349 checking RSA key
+2350 performing RSA encryption
+2351 checking RSA signature
+2352 Invalid signature
+2353 Signature mismatched with digest.
+2354 generating RSA signature
+2355 Error decrypting public-key data
+2356 No room for a symmetric key
+2357 encoding public key
+2358 decoding public key
+2359 creating DH object
+2360 generating DH key
+2361 Weird! Our own DH key was invalid. I guess once-in-the-universe chances really do happen. Trying again.
+2362 Weird! pubkey_len (%d) was smaller than DH_BYTES (%d)
+2363 DH key must be at least 2.
+2364 DH key must be at most p-2.
+2365 Rejecting insecure DH key [%s]
+2366 Rejected invalid g^x
+2367 DH_compute_key() failed.
+2368 completing DH handshake
+2369 RAND_poll() failed.
+2370 Can't get CryptoAPI provider [1]
+2371 Can't get entropy from CryptoAPI.
+2372 Seeding RNG from "%s"
+2373 Error reading from entropy source (read only %lu bytes).
+2374 Cannot seed RNG -- no entropy source found.
+2375 generating random data
+2376 illegal character in base32 encoded string
+;
+2377 debug
+2378 proxy
+2379 info
+2380 notice
+2381 warn
+2382 error
+2383 UNKNOWN
+2384 Message from libevent: %s
+2385 Warning from libevent: %s
+2386 Error from libevent: %s
+2387 Message [%d] from libevent: %s
+;
+2388 Capacity is %lu, item size is %lu, alloc size is %lu
+2389 %I64u bytes in %d empty chunks
+2390    used chunk: %d items allocated
+2391 %I64u/%I64u bytes in %d partially full chunks
+2392 %I64u/%I64u bytes in %d full chunks
+2393 Total: %I64u/%I64u bytes allocated for cell pools are full.
+2394 %I64u cell allocations ever; %I64u chunk allocations ever; %I64u chunk frees ever.
+;
+2395 Gzip not supported with zlib %s
+2396 Error from deflateInit2: %s
+2397 <no message>
+2398 Size overflow in compression.
+2399 Ran over unsigned int limit of zlib while uncompressing.
+2400 Gzip compression didn't finish: %s
+2401 Error freeing gzip structures
+2402 Error from inflateInit2: %s
+2403 Error from second inflateInit2: %s
+2404 possible truncated or corrupt zlib data
+2405 Gzip decompression returned an error: %s
+2406 Gzip returned an error: %s
+;
+2407 TLS error while %s%s%s: %s (in %s:%s)
+2408  with 
+2409 TLS error%s%s: %s (in %s:%s)
+2410 TLS error: unexpected close while %s
+2411 TLS error: <syscall error while %s> (errno=%d: %s)
+2412 TLS connection closed while %s
+2413 OpenSSL %s looks like version 0.9.8l; I will try SSL3_FLAGS to enable renegotiation.
+2414 OpenSSL %s [%lx] looks like it's older than 0.9.8l, but some vendors have backported 0.9.8l's renegotiation code to earlier versions, and some have backported the code from 0.9.8m or 0.9.8n.  I'll set both SSL3_FLAGS and SSL_OP just to be safe.
+2415 OpenSSL %s has version %lx
+2416 Still have entries in the tlsmap at shutdown.
+2417 generating certificate
+2418 Error creating certificate
+2419 creating TLS context
+2420 No session on TLS?
+2421 No ciphers on session
+2422 Got a non-version-1 cipher called '%s'
+2423 Got a non-version-1 cipher list from %s.  It is: '%s'
+2424 Couldn't look up the tls for an SSL*. How odd!
+2425 List was: %s
+2426 Cipher %d: %lx %s
+2427 Skipping v2 cipher %s
+2428 Found cipher %s
+2429 Inserting fake %s
+2430 generating TLS context
+2431 setting ciphers
+2432 opening BIO
+2433 Newly created BIO has read count %lu, write count %lu
+2434 Freeing a TLS that was not in the ssl->tls map.
+2435 Got a TLS renegotiation from %s
+2436 read returned r=%d; TLS is closed
+2437 read returned r=%d, err=%d
+2438 resuming pending-write, (%d to flush, reusing %d)
+2439 For some reason, wasV2Handshake didn't get set. Fixing that.
+2440 Completed V2 TLS handshake with client; waiting for renegotiation.
+2441 Server sent back a single certificate; looks like a v2 handshake on %p.
+2442 re-setting ciphers
+2443 reading to shut down
+2444 TLS returned "half-closed" value while already half-closed
+2445 getting peer certificate
+2446 Certificate %s: is your system clock set incorrectly?
+2447 Couldn't allocate BIO!
+2448 printing certificate lifetime
+2449 (certificate lifetime runs from %s through %s. Your time is %s.)
+2450 getting certificate lifetime
+2451 Unexpected number of certificates in chain (%d)
+2452 No distinct identity certificate found
+2453 X509_verify on cert and pkey returned <= 0
+2454 finishing tor_tls_verify
+2455 not yet valid
+2456 already expired
+2457 checking certificate lifetime
+2458 Preposterously large value in tor_tls_get_n_raw_bytes. r=%lu, last_read=%lu, w=%lu, last_written=%lu
+2459 Unhandled OpenSSL errors found at %s:%d: 
+;
+2460 Out of memory on malloc(). Dying.
+2461 Out of memory on realloc(). Dying.
+2462 Out of memory on strdup(). Dying.
+2463 mallinfo() said: arena=%d, ordblks=%d, smblks=%d, hblks=%d, hblkhd=%d, usmblks=%d, fsmblks=%d, uordblks=%d, fordblks=%d, keepcost=%d
+2464 comparing times too far apart.
+2465 Out-of-range argument to tor_timegm
+2466 Got invalid RFC1123 time %s
+2467 Got invalid RFC1123 time %s: No such month
+2468 Got invalid RFC1123 time %s. (Before 1970)
+2469 ISO time %s was unparseable
+2470 ISO time %s was nonsensical
+2471 Got invalid ISO time %s. (Before 1970)
+2472 Directory %s cannot be read: %s
+2473 Directory %s does not exist.
+2474 Creating directory %s
+2475 Error creating directory %s: %s
+2476 %s is not a directory
+2477 We're writing a text string that already contains a CR.
+2478 Failed to generate filename
+2479 Couldn't open "%s" (%s) for writing: %s
+2480 Couldn't seek to end of file "%s": %s
+2481 Couldn't fdopen "%s" [%d]: %s
+2482 Error closing "%s": %s
+2483 Error flushing "%s": %s
+2484 Error replacing "%s": %s
+2485 Error writing to "%s": %s
+2486 Could not open "%s": %s 
+2487 Could not fstat "%s".
+2488 Error reading from file "%s": %s
+2489 We didn't convert CRLF to LF as well as we hoped when reading %s. Coping.
+2490 Could read only %d of %ld bytes of file "%s".
+2491 Couldn't find $HOME environment variable while expanding "%s"
+2492 Couldn't get homedir for "%s"
+2493 Couldn't expend homedir on system without pwd.h
+2494 pipe failed; exiting. Error was %s
+2495 fork failed. Exiting.
+2496 chdir to "%s" failed. Exiting.
+2497 /dev/null can't be opened. Exiting.
+2498 dup2 failed. Exiting.
+2499 write failed. Exiting.
+2500 Unable to open "%s" for writing: %s
+2501 We have no network-status consensus.
+2502 We have no recent network-status consensus.
+2503 No live bridge descriptors.
+2504 We have only %d/%d usable descriptors.
+2505 Only %d descriptor%s here and believed reachable!
+2506 
+2507 
+2508 
+2509 
+2510 
+;
+;
+;	AdvOR.dll messages
+;
+2511 Current version of Advanced Onion Router cannot intercept processes on your system.
+2512 Error opening process for writing
+2513 Error allocating memory in target process
+2514 Error creating remote thread, code: 
+2515 Error loading AdvOR.dll in selected process, code: 
+2516 The following functions could not be intercepted:
+
+2517 Restricted process 
+2518  created a new process with PID 
+2519  tries to resolve the address 
+2520  - reverse DNS lookup for address 
+2521  - WPAD vulnerability detected, protecting ...
+2522  - attempt to create a non-TCP socket ( 
+2523  ) - we return 
+2524 : Redirecting connection for address 
+2525 Process name
+2526 PID
+2527 Setting proxy restrictions for process with PID 
+2528 Removing proxy restrictions from process with PID 
+2529 There was an error creating AdvOR pipe. If there is another instance of same AdvOR, close it and try again.
+;
+;	Context menus
+;
+2530 &Filter "
+2531 &Track exit for 
+2532 Tr&ack exit for 
+2533 &Remember exit for 
+2534 F&orget exit for 
+2535 &Ban address 
+;
+;	Bridges and proxies
+;
+2536 Enable these options if you think that your ISP is filtering Tor
+2537 Get a list with bridges from https://bridges.torproject.org
+2538 Bridges (IP:ORPort [fingerprint]) - each address on a separate line
+2539 Use encrypted directory connections (via ORPort instead of DirPort)
+2541 All HTTP directory requests will use this proxy:
+2542 All TLS (SSL) connections will use this proxy:
+2543 Proxy account (username:password):
+2544 Error loading wininet.dll
+2545 The following bridges were downloaded from https://bridges.torproject.org:
+
+%s
+2546 Bridges downloaded
+2547 No valid bridges were found.
+;
+;	Hidden service selection dialog
+;
+2548 Select a service
+2549 Select &process
+2550 &Select port
+2551 &Cancel
+2552 Application [PID]
+2553 Local address
+2554 Local port
+;
+;	Rejecting request for a banned exit node
+;
+2555 Rejecting request for address %s:%u because the exit %s was found in banlist .
+;
+;	Dump statistics
+;
+2556 Show &statistics
+;
+;	Network information
+;
+2557 Circuit list
+2558 Details about selected item
+2559 Destroy circuit
+2560 New circuit ...
+2561 Close connection
+2562 Kill process
+2563 Traffic
+2564 Download:
+2565 Upload:
+2566 Totals
+2567 Downloaded:
+2568 Uploaded:
+2569 Build new circuit
+2570 Estimated node list:
+2571 Circuit path length:
+2572 Estimate new path
+2573 &OK
+2574 C&ancel
+2575 Circuit ID %d
+Purpose: %s
+State: %d (%s)
+Created: %s
+2576 Circuit ID %d
+Purpose: %s
+State: %d (%s)
+Created: %s
+
+%s
+2577 Hop state: %s
+
+2578 closed
+2579 awaiting keys
+2580 open
+2581 unknown
+2582 Country: %s
+Address: %d.%d.%d.%d:%d
+2583 Identity digest: 
+2584  
+Router name: %s
+
+2585 Family: %s
+
+2586 Purpose: %s
+
+2587 Published: 
+2588 Platform: %s
+
+2589 Bandwidth rate: 
+2590 Bandwidth burst: 
+2591 Bandwidth capacity: 
+2592 Uptime: 
+2593 %ld days, 
+2594 %ld hours, 
+2595 %ld minutes, 
+2596 %ld seconds
+
+2597 Uptime: %ld seconds
+
+2598 Last time we could reach this OR: 
+2599  since 
+2600 Contact info: %s
+
+2601 This router is hibernating.
+
+2602 This router caches and serves extrainfo documents.
+
+2603 This router allows single hop exits.
+
+2604 This router is running.
+
+2605 A trusted directory server validated this router.
+
+2606 Invalid router: no trusted directory server could validate this router.
+
+2607 The nickname appears to be invalid.
+
+2608 This router is considered to be fast.
+
+2609 This router is considered to be stable.
+
+2610 This router can be used as entry guard.
+
+2611 This router can be used as exit.
+
+2612 This router is considered to be a bad exit.
+
+2613 This router is considered to be a bad directory.
+
+2614 This router claims to be a hidden service directory %s.
+
+2615 and directory servers say that it is a hidden service directory
+2616 but no directory servers say that it is
+2617 Directory servers say this router is a hidden service directory.
+
+2618 Exit policy rejects everything.
+
+2619 Exit policy:
+2620  
+Connection type: %s / 
+2621 base connection
+2622 OR connection
+2623 edge connection
+2624 directory connection
+2625 control connection
+2626 unknown connection
+2627  
+State: %s
+
+2628 Purpose: %s
+
+2629 connect
+2630 resolve
+2631 Connection created: 
+2632 Last read time: 
+2633 Last write time: 
+2634 Address: %s
+
+2635 Last time a client used this connection: 
+2636 Actual address: %d.%d.%d.%d
+
+2637 This connection is too old for new circuits.
+
+2638 Chosen exit: %s
+
+2639 Process ID: %u
+Process name: 
+2640 Requested address: %s:%d
+
+2641 Final address: %s:%d
+
+2642 Last socks request: %s
+
+2643 connect
+2644 resolve
+2645 name lookup
+2646 select router
+2647 unknown
+2648 Bytes read: 
+2649 Bytes written: 
+2650 This stream must attach to a one-hop circuit.
+
+2651 Chosen exit is optional.
+
+2652 The exit was chosen via TrackHostExit.
+
+2653 Requested resource: %s
+
+2654 Connected via Tor to this directory server.
+
+2655 Router purpose: %s
+
+2656 A full path having requested length could not be generated.
+%d routers could not be added.
+2657 Estimate path
+2658 Banned router
+2659 The router %s from this circuit was found in banlist. Are you sure you want to launch this circuit ?
+2660 The router %s from this circuit was not found in router list.
+2661 Router not found
+2662 There was an error while opening selected process - code: %d.
+%s
+2663 A process identifier for selected connection was not set.
+;
+;	Dialog that asks for private key of an existing hidden service
+;
+2664 Use an existing .onion key
+2665 Onion address:
+2666 Paste here the private key for your hidden service:
+2667 &OK
+2668 C&ancel
+;
+;	Maximum predicted circuits
+;
+2669 Maximum number of unused predicted open circuits:
+2670 Started without predicting circuits.
+;
+2671 &Disconnect
+;
+2672 All new connections will appear as originating from IP %d.%d.%d.%d .
+2673 All new connections will appear as originating from a new IP.
+2674 All new connection requests will be blocked.
+2675 All new connections will appear as originating from %s (%s).
+2676 All new connections will appear as originating from a new country.
+;
+2677 Priority of favorite nodes (%):
+;
+;	Context menus for circuit tree
+;
+2678 &Ban %s (all positions)
+2679 Ban %s (e&xit)
+2680 Mark router %s as &invalid
+2681 Add &entry %s to favorites
+2682 A&dd exit %s to favorites
+2683 Kill process %s (PID: %u)
+2684 Set invalid router
+2685 The router %s is already marked as invalid.
+2686 The router %s was marked as invalid.
+;
+2687 no route to host
+;
+2688  - connection request for an address that was not found in AdvOR.dll's onion cache. This can happen when a process is re-intercepted and it keeps its own DNS cache with fake IPs given by previous instances of AdvOR.dll. You can wait until program's cache expires or you can restart the program.
+2689 An application is sending junk through AdvOR pipe. The following data was received:
+
+2690  - the application has existing opened connections that do not go through the OR network. The following connections were found:
+2691 Do you want to close these connections ?
+2692 A non-proxy HTTP request was sent for address %s. If your application is intercepted, something is blocking AdvOR.dll (known issue with Nod32).
+2693 Exclusivity: 
+;
+2694 &Close all existing connections
+2695 &Expire tracked hosts
+;
+;	Plugins
+;
+2696 Rescan
+2697 Remove
+2698 Reload
+2699 Unload
+2700 Rights ...
+2701 Plugin DLL
+2702 Status
+2703 Plugin description
+2704 Error loading plugin %s
+2705 The procedure AdvTor_InitPlugin() was not found in %s or it points to an invalid location.
+2706 The plugin %s cannot be loaded at this time (initialization failed).
+2707 Loaded
+2708 Error
+2709 Disabled
+2710 Unknown
+2711 No plugins were found - the directory %s does not exist.
+2712 No plugins were found - %s is not a directory.
+2713 The plugin %s is currently busy. Do you want to unload it anyway?
+2714 Plugin: 
+2715 [%s] Rejecting request for banned address %s .
+2716 Plugin rights
+2717 Configuration page
+2718 Save settings to AdvOR.ini
+2719 Filter client traffic
+2720 Change address maps
+2721 Create OR connections
+2722 Accept clients
+2723 Hidden service provider
+2724 Intercept processes
+2725 &OK
+2726 C&ancel
+;
+;	Router selection dialogs
+;
+2727 E|X
+2728 New entry ...
+2729 Insert node ...
+2730 New exit ...
+;
+;	Tor 0.2.1.29
+;
+2731 Input looks like a possible zlib bomb; not proceeding.
+2732 Hit SIZE_T_CEILING limit while uncompressing.
+2733 Ran over unsigned int limit of zlib while uncompressing.
+2734 Possible zlib bomb; abandoning stream.
+2735 Unable to automap address %s
+;
+2736 [%s] Attempt to use a reserved exclusivity key for a client connection to address %s .
+;
+2737 Filters
+;
+2738 Exit selection algorithm uses consecutive displayed nodes from this list
+;
+;	Hot keys
+;
+2739 Hot keys
+2740 Hide / restore Advanced OR window
+2741 New identity
+2742 Intercept focused application
+2743 Release focused application
+2744 The "Hide/Restore" hot key was unregistered successfully.
+2745 The "New Identity" hot key was unregistered successfully.
+2746 The "Intercept" hot key was unregistered successfully.
+2747 The "Release" hot key was unregistered successfully.
+2748 There was an error unregistering the "Hide/Restore" hot key.
+2749 There was an error unregistering the "New Identity" hot key.
+2750 There was an error unregistering the "Intercept" hot key.
+2751 There was an error unregistering the "Release" hot key.
+2752 The "Hide/Restore" hot key was registered successfully.
+2753 The "New Identity" hot key was registered successfully.
+2754 The "Intercept" hot key was registered successfully.
+2755 The "Release" hot key was registered successfully.
+2756 There was an error registering the "Hide/Restore" hot key.
+2757 There was an error registering the "New Identity" hot key.
+2758 There was an error registering the "Intercept" hot key.
+2759 There was an error registering the "Release" hot key.
+;
+2760 The process %s is already intercepted.
+2761 The process %s is now intercepted. All new connections will go through the Tor network.
+2762 There was an error when trying to intercept some functions from the process %s. This usually happens if AdvOR was started from a restricted account.
+;
+;	Tor 0.2.1.30
+;
+2763 Certificate is far too big (at %lu bytes long); rejecting
+;
+;	AS paths
+;
+2764 AS paths:
+
+2765 Estimate AS paths and avoid AS path intersections
+2766 Failed to build a circuit with no AS path intersections.
+;
+;	Confirmations
+;
+2767 Close all connections opened by a process when intercepting it
+2768 Show a confirmation dialog on exit
+2769 Only when releasing processes
+2770 Are you sure you want to exit Advanced Onion Router ?
+2771 The following programs are intercepted:
+2772 If you exit now, these programs will no longer be intercepted.
+2773 I'm al&ways sure. Go away now.
+2774 &Yes
+2775 &No
+;
+2776 Minimum circuit bandwidth rate:
+2777 Disconnected
+;
+2778 &Priority
+2779 &High
+2780 &Normal
+2781 &Low
+2782 &Availability
+2783 N&ever expires
+2784 &Normal
+2785 &Expired
+2786 Not &set
+;
+;	Encryption
+;
+2787 Encrypt all settings using AES
+2788 New password ...
+2789 Disabling encryption will leave all your configuration files unprotected.
+Are you sure you want to disable encryption ?
+2790 Password
+2791 Enter the password that decrypts your configuration data:
+2792 Use this password:
+2793 Re-enter the password:
+2794 The password is a block of 4096 bytes from this file:
+2795 File offset in bytes:
+2796 &OK
+2797 C&ancel
+2798 Passwords do not match.
+;
+;	Page names
+;
+2799 Advanced proxy settings
+2800 Banned routers
+2801 Favorite routers
+2802 Circuit build
+2803 Associate addresses
+2804 ■ Private identity
+2805 ■ Intercept
+2806 Quick Start
+2807 Processes
+2808 Sandboxing
+2809 Filters
+;
+;	Proxy
+;
+2810 These are the settings you can configure in other programs:
+2811 Proxy protocols:
+2812 Socks4, Socks5, HTTP, HTTPS (autodetected)
+2813 In some cases, enabling proxies in a program is not enough to ensure your anonymity. You can reduce the chance of your real IP getting leaked via direct connections and/or direct DNS queries if you intercept the program that will have OR connections.
+You can:
+2814 Run and intercept a program:
+2815 Run ...
+2816 Select the window created by a process you want to intercept:
+2817 To start using Advanced Onion Router click "► Connect".
+;
+;	Associate addresses
+;
+2818 Enter exit node associations using this format: address address.exitname.exit
+2819 Always use same exits with these addresses until the identity is changed or until the exit association expires (add here addresses of file hosts that expect users to wait, eg.: .rapidshare.com ):
+;
+;	Hosted services
+;
+2820  
+
+
+
+		1. Host a Hidden Service
+
+	To start hosting a hidden service, start your server software that will host your hidden service and configure it to disable any settings that would cause it to reveal its real location (or, alternatively, you can intercept it). You start hosting a hidden service when you add it to the list of hidden services. Your service will be accessible through its associated .onion address (you may need to configure this .onion address in the server software you use).
+
+		2. Host an Onion Router
+
+	The OR network relies on volunteers to donate bandwidth. The more people who run relays, the faster the OR network will be. If you have at least 20 kilobytes/s each way, please help out by configuring Advanced Onion Router to be a relay too. To do this, you must enter a port for your relay (default port is 9050). You are hosting an onion router when directory servers have your address in the list they share for OR clients (they may not immediately update their lists with your service).
+;
+;	Private identity
+;
+2821 The following events will happen when you click "New identity":
+2822 Generate new identity seeds used to randomize identity-specific information
+2823 Identity-specific generators for HTTP headers and for nicknames use identity seeds to ensure constant values during identity life time.
+2824 Close all connections and destroy all circuits
+2825 Prevent mixing traffic that belongs to different identities.
+2826 Expire all circuits
+2827 Old circuits are no longer re-used for new connections.
+2828 Expire temporary address maps (tracked hosts)
+2829 Re-map all temporary address maps to new exits.
+2830 Delete cookies saved by processes that had OR connections
+2831 All processes that had HTTP OR connections and are still active are identified and their cookies and DOM storage (HTML5 cookies) are deleted.
+2832 Delete Flash Player's cookies, local storage data and history
+2833 Some websites may use some of Flash Player's features to track their visitors.
+2834 Delete cookies stored by Microsoft Silverlight
+2835 Silverlight cookies may also contain tracking information.
+2836 Generate new Windows Media Player client ID
+2837 Your Windows Media Player client ID is saved to AdvOR-undo.reg and the file is not overwritten. If some licensed material is no longer playable because of changing your unique ID, double click the .reg file to restore it.
+;
+;	Intercept
+;
+2838 Some applications have installed extensions / scripting languages that can be abused to bypass proxy restrictions to reveal your real IP. To make sure an application always uses its proxy settings, the application is intercepted and Winsock calls are redirected to AdvOR.dll.
+
+		1. Quick Start
+	"Quick Start" is a list of favorite programs that Advanced Onion Router can start and intercept at startup. Each program can have its own private sandboxing settings. All program-specific sandboxing restrictions apply, and all programs started from the "Quick Start" menus / command line / window cannot access any real information that is restricted by these settings.
+	This is the "safe" way to start a program.
+
+		2. Processes
+	The list of processes allows a quick way to release an intercepted process and/or to intercept a program that was started before starting Advanced Onion Router, or a program that is allowed to have have non-OR network activities during the same session. While sandboxing restrictions apply, the program may already have some restricted information it got before these restrictions were applied and it may send restricted information through the OR network. If you are not sure the program doesn't leak any information that can be used to uniquely identify you, consider starting it via "Quick Start".
+
+		3. Sandboxing
+	Sandboxing restrictions are used when a new process is intercepted. When a program is added to the "Quick Start" list, current sandboxing options are saved as the default settings for intercepting that program. To change the settings for an existing "Quick Start" entry, remove the program from the "Quick Start" list, change sandboxing options and re-add it. When using the "Processes" window to intercept an existing process, current sandboxing settings are used.
+2839 Check a process to intercept it, uncheck to release it
+;
+;	Quick Start
+;
+2840 Double click to run and intercept a program:
+2841 Add ...
+2842 Run ...
+2843 Modify ...
+2844 Move up
+2845 Move down
+2846 Delete
+;
+;	Sandboxing
+;
+2847 These settings are used when a new program is intercepted or added to the "Quick Start" list:
+2848 "Local address" is the address a program gets when trying to get your local IP. Here you can enter any fake address or hostname.
+2849 The difference between your local time and someone else's local time can be used to uniquely identify you. Enable this option to prevent intercepted programs from using your real local time.
+2850 Fake IPs are within the 255.16.* range and are never sent through the OR network. Fake IPs are replaced with initial addresses when sending connection requests to exit nodes.
+2851 Enable this option to make sure your real IP is not leaked when the program is using unsupported protocols.
+2852 Use this option to always exclude exit nodes that are currenly used by other programs to make sure the same exit node cannot know what you do with 2 different programs or instances of the same program.
+2853 When a program is intercepted its icon is changed by AdvOR.dll to help identifying intercepted processes.
+;
+;	Processes
+;
+2854 Application name
+2855 Path and file name
+2856 No process is selected
+;
+;	Logs and events shown when changing the identity
+;
+2857 Error opening the registry key %s
+2858 Current Windows Media Player client ID: %s
+2859 Windows Media Player client ID was saved to %s.
+2860 New Windows Media Player client ID: %s
+2861 Deleting %s
+2862 Interface: 
+2863 Flash cookies deleted: 
+2864 Flash website personalization items deleted: 
+2865 Flash history items removed from settings.sol : 
+2866 Flash cached items removed: 
+2867 Cookies deleted: 
+2868 DOM Cookies deleted: 
+2869 Cookie databases deleted: 
+2870 Silverlight cookies deleted: 
+;	IE 8+, Vista+
+2871 ClearMyTracksByProcess(): cookies deleted.
+;	Opera: cookies were deleted successfully
+2872 Called Opera.dll to delete all cookies.
+;	Firefox: cookies were deleted successfully
+2873 CookieManager->removeAll(): cookies deleted.
+;	Safari: cookies were deleted successfully
+2874 CFHTTPCookieStorageDeleteAllCookies(0): cookies deleted.
+;
+;	HTTP headers
+;
+2876 Browser type:
+2877 Browser version:
+2878 Browser OS:
+2879 Browser extensions:
+2880 Regional settings:
+2881 Referers must be from the same domain
+2882 Reject requests for *.exitname.exit URL's
+2883 Reject requests for *.onion URL's
+2884 Remove ETag and Last-Modified from response headers (possible evercookies)
+2885 Remove If-(Un)Modified-Since, If-(None-)Match, If-Range (possible evercookies)
+2886 Remove dangerous HTTP headers (X-Forwarded-For, Client-IP, etc.)
+2887 Remove unknown HTTP headers
+2888 Also, remove these headers:
+2889 Debug messages
+2890 Show requested addresses
+2891 Full headers
+2892 Show HTTP status
+2893 Full headers
+;
+2894 Original autodetected browser
+2895 Generated using identity seeds
+2896 Chrome
+2897 Firefox
+2898 Internet Explorer
+2899 Opera
+2900 Safari
+2901 Bing bot
+2902 Googlebot
+2903 Yahoo! bot
+2904 Yandex bot
+;
+2905 Original autodetected version
+2906 Identity-dependent minor version
+2907 Identity-dependent major version
+;
+2908 Original operating system (Windows)
+2909 Identity-dependent OS (any OS, any version)
+2910 Identity-dependent Windows (any version)
+2911 Identity-dependent Linux (any version)
+2912 Identity-dependent Mac OS X (any version)
+;
+2913 All existing extensions
+2914 Hide all extensions
+2915 Identity-dependent fake extensions
+;
+2916 Current regional settings
+2917 Always set US English language
+2918 Use exit node's language
+;
+2919 [%s] HTTP request headers:
+%s
+2920 [%s] Sending adjusted HTTP headers:
+%s
+2921 [%s] Downloading from %s
+2922 [%s] Received:
+%s
+2923 [%s] HTTP reply:
+%s
+2924 [%s] Download status: %s
+2925 The application %s is sending unrecognized HTTP headers: "%s"
+2926 The application %s is sending dangerous HTTP headers which may uniquely identify you. The headers were removed, but the application may use some extensions which can access this private data. The application sends: "%s"
+2927 [%s] Sending:
+%s
+;
+2928 Disallow cookies used with previous identities
+2929 Expire internal cookie cache and remove expired cookies from requests.
+;
+2930 Mask a BitTorrent client as uTorrent
+;
+2931 Internal error in asprintf
+2932 %s(%I64d) failed with error %s: Rounding up to 1970
+2933 %s(%I64d) failed with error %s: Rounding down to 2037
+2934 %s(%I64d) failed with error %s: can't recover
+2935 Unable to duplicate a %s key: openssl failed.
+2936 Called with unknown algorithm %d
+2937 We compressed something and got an insanely high compression factor; other Tors would think this was a zlib bomb.
+2938 I wanted to skip %d chunks in the freelist for %d-byte chunks, but only found %d. (Length %d)
+2939 Freelist length for %d-byte chunks may have been messed up somehow.
+There were %d chunks at the start. I decided to keep %d. I wanted to free %d. I freed %d. I somehow think I have %d left to free.
+2940 Learned fingerprint %s for bridge %s:%d
+2941 Not using bridge at %s: it is in ExcludeNodes.
+2942 Adjusted bridge '%s' to match configured address %s:%d.
+2943 CircuitBuildTime learning is disabled. Consensus=%d, Config=%d, AuthDir=%d
+2944 Consensus parameter cbtclosequantile is too small, raising to %d
+2945 Consensus parameter cbtinitialtimeout is too small, raising to %d
+2946 The Tor Directory Consensus has changed how many circuits we must track to detect network failures from %d to %d.
+2947 Config CircuitBuildTimeout too low. Setting to %ds
+2948 Rewound history by %d places. Current index: %d. Total: %d
+2949 Circuit build time is too large (%u). This is probably a bug.
+2950 Adding circuit build time %u
+2951 No build times less than CBT_BUILD_TIME_MAX!
+2952 Xm mode #%d: %u %u
+2953 The number of circuit times that this Tor version uses to calculate build times is less than the number stored in your state file. Decreasing the circuit time history from %lu to %d.
+2954 For some insane reasons, you had %lu circuit build observations in your state file. That's far too many; probably there's a bug here.
+2955 Replaced timeout %d with %d
+2956 We had %d timeouts out of %d build times, and filtered %d above the max of %u
+2957 Unable to parse circuit build times: Too few arguments to CircuitBuildTime
+2958 Unable to parse circuit build times: Unparsable bin number
+2959 Unable to parse circuit build times: Unparsable bin count
+2960 Too many build times in state file. Stopping short before %d
+2961 Adding %d timeouts.
+2962 Corrupt state file? Build times count mismatch. Read %d times, but file says %d
+2963 Corrupt state file? Shuffled build times mismatch. Read %d times, but file says %d
+2964 Loaded %d/%d values from %d lines in circuit time histogram
+2965 Discrepancy in build times count: %d vs %d
+2966 Could not determine largest build time (%d). Xm is %dms and we've abandoned %d out of %d circuits.
+2967 Tor now sees network activity. Restoring circuit build timeout recording. Network was down for %d seconds during %d circuit attempts.
+2968 Circuit somehow completed a hop while the network was not live. Network was last live at %s, but circuit launched at %s. It's now %s.
+2969 Tor has not observed any network activity for the past %d seconds. Disabling circuit build timeout recording.
+2970 Got non-live timeout. Current count is: %d
+2971 Insanely large circuit build timeout value. (timeout = %fmsec, close = %fmsec)
+2972 Circuit build timeout of %dms is beyond the maximum build time we have ever observed. Capping it to %dms.
+2973 Your network connection speed appears to have changed. Resetting timeout to %lds after %d timeouts and %d buildtimes.
+2974 Circuit build measurement period of %dms is more than twice the maximum build time we have ever observed. Capping it to %dms.
+2975 Set buildtimeout to low value %fms. Setting to %dms
+2976 Based on %d circuit times, it looks like we don't need to wait so long for circuits to finish. We will now assume a circuit is too slow to use after waiting %ld seconds. Circuit timeout data: %fms, %fms, Xm: %d, a: %f, r: %f
+2977 Based on %d circuit times, it looks like we need to wait longer for circuits to finish. We will now assume a circuit is too slow to use after waiting %ld seconds. Circuit timeout data: %fms, %fms, Xm: %d, a: %f, r: %f
+2978 Set circuit build timeout to %lds (%fms, %fms, Xm: %d, a: %f, r: %f) based on %d circuit times
+2979 Circuit %d (purpose %d, %s) has timed out, yet has attached streams!
+2980 Extremely large value for circuit build timeout: %lds. Assuming clock jump. Purpose %d (%s)
+2981 Have %d clean circs need another buildtime test circ.
+2982 Ancient non-dirty circuit %d is still around after %ld milliseconds. Purpose: %d (%s)
+2983 Our circuit died before the first hop with no connection
+2984 The application request to %s:%d has launched %d circuits without finding one it likes.
+2985 We are acting as a bridge now. Starting new GeoIP stats interval.
+2986 We are acting as a bridge now. Starting new GeoIP stats interval in 6 hours from now.
+2987 Configured to measure statistics. Look for the *-stats files that will first be written to the data directory in 24 hours from now.
+2988 Option '%s' used more than once; all but the last value will be ignored.
+2989 RefuseUnknownExits must be 0, 1, or auto
+2990 Can't set a DirPort on a bridge relay; disabling DirPort
+2997 Bad OwningControllerProcess: %s
+2999 New control connection opened.
+3000 Unix socket path '%s' is too long to fit.
+3001 getsockname() couldn't learn address for %s: %s
+3002 Encoding https authenticator failed
+3003 SOCKS4 client is incompatible with IPv6
+3004 Invalid proxy protocol, %d
+3005 set state %s
+3006 Your https proxy sent back an oversized response. Closing.
+3007 https proxy response not all here yet. Waiting.
+3008 Unparseable headers from proxy (connecting to '%s'). Closing.
+3009 HTTPS connect to '%s' successful! (200 %s) Starting TLS.
+3010 The https proxy refused to allow connection to %s (status code %d, %s). Closing.
+3011 The https proxy sent back an unexpected status code %d (%s). Closing.
+3012 enter state %s
+3013 Invalid proxy_state for reading, %d
+3014 leaving state %s
+3015 Proxy Client: unable to connect to %s:%d (%s)
+3016 Proxy Client: unable to connect to %s:%d
+3017 Proxy Client: connection to %s:%d successful
+3018 Rejecting request for anonymous connection to private address %s on a TransPort or NATDPort. Possible loop in your NAT rules?
+3019 Rejecting SOCKS request for anonymous connection to private address %s
+3020 The ".exit" notation is disabled due to security risks. Set AllowTorHosts to 1 or 3 in your configuration to enable it.
+3021 Done with initial SSL handshake (client-side). Requesting renegotiation.
+3022 Done with initial SSL handshake (server-side). Expecting renegotiation.
+3023 Writing %s failed: %s
+3024 Control connection %d has taken ownership of this Tor instance.
+3025 Owning controller %s has %s -- shutting down.
+3026 Owning controller %s has %s -- exiting now.
+3027 Couldn't create process-termination monitor for owning controller: %s. Exiting.
+3028 Wanted to contact authority '%s' for %s, but it's in our ExcludedNodes list. Skipping.
+3029 Wanted to contact directory mirror %s for %s, but it's in our ExcludedNodes list. Skipping. This choice might make your Tor not work.
+3030 Malformed fingerprint in list: %s
+3032 Rejected vote from %s ("%s").
+3033 Invalid line in bandwidth file: %s
+3034 Incomplete line in bandwidth file: %s
+3035 Double bw= in bandwidth file line: %s
+3036 Invalid bandwidth in bandwidth file line: %s
+3037 Double node_id= in bandwidth file line: %s
+3038 Invalid node_id in bandwidth file line: %s
+3039 Node ID %s not found in routerstatus list
+3040 Can't open bandwidth file at configured location: %s
+3041 Long or truncated time in bandwidth file: %s
+3042 Non-integer time in bandwidth file: %s
+3043 Bandwidth measurement file stale. Age: %u
+3044 Bandwidth measurement file successfully read. Applied %d measurements.
+3045 Unable to compute digest of legacy v3 identity key
+3046 Couldn't parse IP address "%s"
+3047 Insufficient memory for client-versions line
+3048 Insufficient memory for server-versions line
+3049 Insufficient memory for network status line
+3050 Insufficient memory for legacy-dir-key line
+3051 Not enough space in buffer for bandwidth-weights line.
+3052 Can't fit microdesc line in vote.
+3053 Bw weight mismatch %d. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d Wmd=%d Wme=%d Wmg=%d Wed=%d Wee=%d Wgd=%d Wgg=%d Wme=%d Wmg=%d
+3054 Consensus with empty bandwidth: G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d
+3055 Bw Weights error %d for %s v10. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d Wmd=%d Wme=%d Wmg=%d Wed=%d Wee=%d Wgd=%d Wgg=%d Wme=%d Wmg=%d weight_scale=%d
+3056 Bw Weights error %d for case %s. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d
+3057 Bw %s: Wgg=%I64d! G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d
+3058 Too much Middle bandwidth on the network to calculate balanced bandwidth-weights. Consider increasing the number of Guard nodes by lowering the requirements.
+3059 Bw-Weights Case 3 v10 but with G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d
+3060 Bw-Weights Case 3 but with G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d
+3061 Computed bandwidth weights for %s with v10: G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d
+3062 Computed bandwidth weights for %s with v9: G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d
+3063 Bad element '%s' in bw weight param
+3064 No NS consensus given.
+3065 Couldn't format signatures
+3066 Nobody has voted on the Running flag. Generating and publishing a consensus without Running nodes would make many clients stop working. Not generating a consensus!
+3067 Couldn't generate a %s consensus at all!
+3068 Couldn't parse %s consensus we generated!
+3069 We generated a microdescriptor we couldn't parse.
+3070 Couldn't create an evdns_base
+3071 Our DNS cache has %d entries. Our DNS cache size is approximately %u bytes.
+3072 Error when putting directory request into local map. There was already an entry for the same identifier.
+3073 Accounting interval moved by %.02f%%; that's fine.
+3074 Accounting interval elapsed; starting a new one
+3075 Error removing read event for %d
+3076 Error removing write event for %d
+3077 Unable to rotate keys after IP change!
+3078 Couldn't load all cached v3 certificates. Starting anyway.
+3079 Couldn't append to journal in %s: %s
+3080 Reloaded microdescriptor cache. Found %d descriptors.
+3081 Removed %d/%d microdescriptors as old.
+3082 Rebuilding the microdescriptor cache...
+3083 Couldn't map file that we just wrote to %s!
+3084 Done rebuilding microdesc cache. Saved %d bytes; %d still used.
+3085 A consensus needs %d good signatures from recognized authorities for us to accept it. This one has %d (%s).
+3086 %d (%s) of the authorities we know didn't sign it.
+3087 It has %d signatures from authorities we don't recognize.
+3088 %d of the signatures on it didn't verify correctly.
+3089 We were unable to check %d of the signatures, because we were missing the keys.
+3090 Unrecognized consensus flavor %s
+3091 Got consensus with unexpected flavor %s (wanted %s)
+3092 Consensus parameter %s is too small. Got %d, raising to %d.
+3093 Consensus parameter %s is too large. Got %d, capping to %d.
+3094 Value of consensus weight %s was too large, capping to %d
+3095 Too big queue, no resuming
+3096 Disabled cell_ewma algorithm because of value in %s
+3097 Enabled cell_ewma algorithm because of value in %s; scale factor is %f per %d seconds
+3098 Cannot determine insertion time of cell. Looks like the CellStatistics option was recently enabled.
+3099 No usable introduction points left for %s. Closing.
+3100 Re-extending circ %d, this time to %s.
+3101 Closing intro circ %d (out of RELAY_EARLY cells).
+3102 Purging client last-HS-desc-request-time table
+3103 Marking for close dir conn fetching rendezvous descriptor for unknown service!
+3104 Marking for close dir conn fetching rendezvous descriptor for service %s
+3105 All introduction points for hidden service are at excluded relays, and StrictNodes is set. Skipping.
+3106 Purging client/v0-HS-authority HS descriptor cache
+3107 Received service descriptor for service ID %s; expected descriptor for service ID %s.
+3108 Another hidden service is already configured for directory %s, ignoring.
+3109 The only supported HiddenServiceVersion is 2.
+3110 Possible replay detected! We received an INTRODUCE2 cell with same PK-encrypted part %d seconds ago. Dropping cell.
+3111 Client asked to rendezvous at a relay that we exclude, and StrictNodes is set. Refusing service.
+3112 We have just finished an introduction circuit, but we already have enough. Closing it.
+3113 Router %s still seems Running, but its address appears to have changed since the last time it was reachable. I'm going to treat it as having been down for %d seconds
+3114 Could not parse value '%s' into a number.'
+3115 Could not parse maximum '%s' into a number.'
+3116 Writing exit port statistics to disk.
+3117 Unable to write exit port statistics to disk!
+3118 Written %lu bytes and read %lu bytes to/from an exit connection to port %d.
+3119 Opened exit stream to port %d
+3120 Attempt to write cell statistics to disk failed. We haven't seen a single circuit to report about.
+3121 Can't peform self-tests for this relay: we have listed ourself in ExcludeNodes, and StrictNodes is set. We cannot learn whether we are usable, and will not be able to advertise ourself.%s
+3122 Success: chose address '%s'.
+3123 Decided to publish new relay descriptor: %s
+3124 Adding stats to extra-info descriptor.
+3125 We just generated an extra-info descriptor with statistics that exceeds the 50 KB upload limit. Removing last added statistics.
+3126 We just generated an extra-info descriptors that exceeds the 50 KB upload limit.
+3127 Could not append signature to extra-info descriptor.
+3128 We just generated an extrainfo descriptor we can't parse.
+3129 Empty routerlist passed in to consensus weight node selection for rule %s
+3130 Empty routerlist passed in to old node selection for rule %s
+3131 Got negative bandwidth weights. Defaulting to old selection algorithm.
+3132 Consensus is not listing bandwidths. Defaulting back to old router selection algorithm.
+3133 Choosing node for rule %s based on weights Wg=%f Wm=%f We=%f Wd=%f with total bw %f
+3134 Weighted bandwidth is %f in node selection for rule %s
+3135 Round-off error in computing bandwidth had an effect on which router we chose. Please tell the developers. %f %I64u %f
+3136 Replacing non-bridge descriptor with bridge descriptor for router %s
+3137 Dropping bridge descriptor for %s because we have no bridge configured at that address.
+3138 Router descriptor was not a configured bridge.
+3139 couldn't lookup source from vote?
+3140 Learned about %s (%s vs %s) from %s's vote (%s)
+3141 Unable to parse descriptor of type %s. See file unparseable-desc in data directory for details.
+3142 Relay's onion key had invalid exponent.
+3143 Too few arguments to r
+3144 Invalid Measured Bandwidth %s
+3145 No bandwidth weights produced in consensus!
+3146 Wmm=%f != %I64d
+3147 Wem=%f != Wee=%f
+3148 Wgm=%f != Wgg=%f
+3149 Wed=%f != Weg=%f
+3150 Wgg=%f != %I64d - Wmg=%f
+3151 Wee=%f != %I64d - Wme=%f
+3152 Wgd=%f + Wmd=%f + Wed=%f != %I64d
+3153 Bw Weight Failure for %s: Etotal %f != Mtotal %f. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3154 Bw Weight Failure for %s: Rtotal %f > Stotal %f. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3155 Bw Weight Failure for %s: 3*Rtotal %f > T %I64d. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3156 Bw Weight Failure for %s: 3*Stotal %f > T %I64d. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3157 Bw Weight Failure for %s: 3*Mtotal %f < T %I64d. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3158 Bw Weight Failure for %s: Etotal %f != Gtotal %f. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3159 Bw Weight Failure for %s: Mtotal %f != Gtotal %f. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3160 Bw Weight Failure for %s: NStotal %f != Mtotal %f. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3161 Bw Weight Failure for %s: 3*NStotal %f < T %I64d. G=%I64d M=%I64d E=%I64d D=%I64d T=%I64d. Wgg=%f Wgd=%f Wmg=%f Wme=%f Wmd=%f Wee=%f Wed=%f
+3162 Bandwidth-weight %s is verified and valid.
+3163 Can't parse document with unknown flavor %s
+3164 Flavor found on non-consensus networkstatus.
+3165 Extraneous token after first directory-signature
+3166 Misplaced directory-footer token
+3167 Bad element '%s' in weight params
+3168 Error decoding declared signing key digest %s in network-status vote.
+3169 Received more than one signature on a network-status vote.
+3170 Unrecognized algorithm name %s
+3171 Multiple digests for %s with %s on detached signatures document
+3172 Bad encoding on consensus-digest in detached networkstatus signatures
+3173 Two signatures with identical keys and algorithm found.
+3174 Unparseable microdescriptor
+3175 Bad last-listed time in microdescriptor
+3176 SOCKS 5 client: continuing without authentication
+3177 SOCKS 5 client: we have auth details but server doesn't require authentication.
+3178 SOCKS 5 client: need authentication.
+3179 SOCKS 5 client: authentication successful.
+3180 Strange value for circuit build time: %ldmsec. Assuming clock jump. Purpose %d (%s)
+3181 The ".onion" notation is disabled due to security risks. Set AllowTorHosts to 2 or 3 in your configuration to enable it.
+;
+3182 Bandwidth rate per connection:
+3183 Bandwidth burst per connection:
+3184 Learn circuit build timeout
+3185 Stream timeout until trying a new circuit (seconds):
+3186 Cell scale factor:
+3187 Refuse exit streams from unknown relays
+3188 Reinitialize the global SSL context
+3189 Delete all SSL certificates that were used with SSL connections and generate new ones. All new connections will use the new SSL context.
+;
+3190 There was an error while trying to download a list with bridges - your Internet Explorer may not recognize the authority that signed the certificate for https://bridges.torproject.org .
+
+Do you want to retry ignoring unrecognized certification authorities ?
+;
+3191 CorporateProxy failed to parse or resolve. Please fix.
+3192 CorporateProxyAuthenticator is too long (>= 512 chars).
+3193 NTLM connect to '%s' successful! (200).
+3194 The NTLM proxy sent back an unexpected status code %d. Closing.
+3195 NTLM: sending type-1 message...
+3196 NTLM challenge: %s
+3197 The proxy requires an unsupported authentication method.
+3198 All requests will use this NTLM proxy:
+3199 [workstation@]domain:
+3200 Account (username:password):
+;
+3201 Unable to initialize Libevent: cannot continue.
+3202 Size of encrypted introduction points is too small.
+3203 [%s] the server returned an invalid chunk size %08X
+3204 [%s] the client sent an invalid chunk size %08X
+;
+3205 Unable to allocate HTTP authenticator. Not setting BridgePassword.
+3206 Got safe cookie authentication response with wrong length (%d)
+3207 Got incorrect safe cookie authentication response
+3208 We have only %d/%d usable exit node descriptors.
+3209 Accumulated too much data (%d bytes) on nonopen OR connection to %s:%u in state %s; closing.
+3210 Accumulated too much data (%d bytes) on nonopen OR connection from %s:%u in state %s; closing.
+;
+3211 Hide all intercepted applications
+3212 Pause hidden applications
+3213 Un-hide and resume hidden applications
+3214 The "Hide All" hot key was unregistered successfully.
+3215 The "Restore All" hot key was unregistered successfully.
+3216 There was an error unregistering the "Hide All" hot key.
+3217 There was an error unregistering the "Restore All" hot key.
+3218 The "Hide All" hot key was registered successfully.
+3219 The "Restore All" hot key was registered successfully.
+3220 There was an error registering the "Hide All" hot key.
+3221 There was an error registering the "Restore All" hot key.
+;
+3222 Ran into an invalid time when trying to find midnight.
+3223 Rejecting null address with 0 port (family %d)
+;
+3224 User:password
+;
+3225 Generate an .onion address
+3226 You have entered a prefix for your new .onion address.\r\nClick \"Generate\" to try to create an address that starts with this prefix.
+3227 Chosen prefix:
+3228 Best match:
+3229 &Generate
+3230 C&ancel
+3231 &Close
+;
+3232  (Blacklisted by MaxMind's GeoIP
+3233 Do not use exits that were blacklisted by MaxMind's GeoIP
+3234 Error updating the OR network window: due to insufficient system resources, circuit information could not be displayed. A system restart may solve this problem.
+;
+3235 Don't anonymize browser type
+;
+; The strings 3240, 3241 and 3242 are not used by AdvOR 0.3.0.16
+3236 Bypass Tor blacklists
+3237 Recent exits (that are probably not blacklisted yet)
+3238 The following restrictions apply to exit nodes when the option to use only recent exits is enabled:
+3239 Maximum uptime (sec.):
+3240 Assume blacklists remove IPs that were not seen for
+3241 days
+3242 Save node statistics to exclude nodes that were restarted and have the same IP
+3243 Exclude IPs that are banned by MaxMind's GeoIP database
+3244 Work in progress
+3245 This area is reserved for next versions.
+Some ideas for improving this feature include injecting public proxies after the exit node and opening more connections through different exit nodes to the same target in case the target doesn't flood the blacklist server with requests. Use our forums to post your suggestions for improving AdvOR's blacklist bypass abilities.
+3246 Use only &recent exits that are probably not blacklisted yet
+;
+3247 Show a completion MessageBox
+3248 Show a MessageBox to confirm that all the events related to changing your identity that blocked AdvOR have completed and that the AdvOR window is responsive again.
+; Every [time_interval] change my IP|identity
+3249 Every
+3250 change my IP
+3251 change my identity
+3252 WARNING: Automated identity changes do not display a message box on completion.
+; Time units
+3253 seconds
+3254 minutes
+3255 hours
+3256 days
+3257 weeks
+3258 months
+3259 years
+;
+3260 Enabling hidden service key %i (%s.onion)
+3261 Disabling hidden service key %i (%s.onion)
+;
